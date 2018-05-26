@@ -1,8 +1,7 @@
 body {
   background-color: darkslategrey;
-  background: darkslategrey url("dog_bg.jpg") cover no-repeat center top;
+  background: darkslategrey url("outside.jpg") cover no-repeat center top;
   padding: 20px;
-
 
   color: azure;
   font-family: monospace;
