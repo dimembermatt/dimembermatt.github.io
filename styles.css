@@ -17,11 +17,8 @@ p {
   padding-bottom: 20px;
   font-size: 1em;
 }
-#major {
-  font-size: 1.5em;
-}
-#school span{
-  font-size: 1em;
+#intro {
+  font-size: .8em;
 }
 
 .colorful {
