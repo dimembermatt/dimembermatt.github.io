@@ -1,0 +1,19 @@
+body {
+    background-color: darkslategrey;
+    color: azure;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+h1 {
+    color: coral;
+}
+p {
+  border: 1px solid darkslategrey;
+  padding: 30px;
+}
+#intro {
+    font-size: 1.3em;
+}
+.colorful {
+    color: orange;
+}
