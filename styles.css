@@ -2,8 +2,6 @@ body {
   background-color: darkslategrey;
   padding: 20px;
 
-  background: url("outside.jpg") cover no-repeat center top;
-
   color: azure;
   font-family: monospace;
   font-size: 100%;
@@ -15,15 +13,20 @@ h1 {
 p {
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 20px;
+  padding-bottom: auto;
   font-size: 1em;
 }
 #intro {
   font-size: .8em;
 }
-#bg {
-  position: relative;
-  overflow: hidden;
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  clear: both;
+  opacity: 80%;
+  background-color: #020033;
 }
 
 /*side navigator*/
@@ -58,7 +61,70 @@ p {
   font-size: 36px;
   margin-left: 50px;
 }
-@@media screen and (max-height: 450px) {
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    padding-bottom: 180px;
+}
+@media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+/*slideshow*/
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
