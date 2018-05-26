@@ -1,7 +1,5 @@
 body {
   background-color: darkslategrey;
-  background: darkslategrey url("dimembermatt.github.io/outside.jpg") cover no-repeat center top;
-  transform: rotate(90deg);
   padding: 20px;
 
   color: azure;
@@ -22,8 +20,12 @@ p {
   font-size: .8em;
 }
 
-.colorful {
-    color: white;
+.menu_bar {
+  height: 3em;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  font-size: .8em;
 }
 a:hover {
   color: #ff0000;
