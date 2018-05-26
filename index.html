@@ -11,10 +11,23 @@
 
 <!--body-->
 <body>
-  <a href="index.html" class="menu_bar">
-    <strong>Home</strong>
-  </a>
-
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <script>
+  /*js functions*/
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
 
   <h1>Matthew Yu</h1>
   <h5 id="intro">B.S. Electrical and Computer Engineering (May 2021)<br>
