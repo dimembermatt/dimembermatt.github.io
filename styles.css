@@ -1,7 +1,9 @@
 body {
+  background: darkslategrey url("dog_bg.jpg") no-repeat center top;
+
   border: 1px solid darkslategrey;
   padding: 20px;
-  background-color: darkslategrey;
+
 
   color: azure;
   font-family: monospace;
