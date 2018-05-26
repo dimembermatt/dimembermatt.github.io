@@ -1,6 +1,7 @@
 body {
   background-color: darkslategrey;
-  background: darkslategrey url("outside.jpg") cover no-repeat center top;
+  background: darkslategrey url("dimembermatt.github.io/outside.jpg") cover no-repeat center top;
+  transform: rotate(90deg);
   padding: 20px;
 
   color: azure;
@@ -12,8 +13,8 @@ h1 {
     font-size: 2.5em;
 }
 p {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 20px;
   font-size: 1em;
 }
@@ -27,4 +28,8 @@ p {
 a:hover {
   color: #ff0000;
   text-decoration: : none;
+}
+#bg {
+  position: relative;
+  overflow: hidden;
 }
