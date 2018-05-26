@@ -1,8 +1,11 @@
 body {
-    background-color: darkslategrey;
-    color: azure;
-    font-family: monospace;
-    font-size: 1.1em;
+  border: 1px solid darkslategrey;
+  padding: 20px;
+  background-color: darkslategrey;
+
+  color: azure;
+  font-family: monospace;
+  font-size: 1.1em;
 }
 h1 {
     color: coral;
@@ -15,5 +18,5 @@ p {
     font-size: 1.3em;
 }
 .colorful {
-    color: orange;
+    color: white;
 }
