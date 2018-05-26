@@ -16,9 +16,13 @@ p {
   padding: 30px;
   font-size: 1em;
 }
-#intro {
-    font-size: 1.5em;
+#major {
+  font-size: 1.5em;
 }
+#school {
+  font-size: 1em;
+}
+
 .colorful {
     color: white;
 }
