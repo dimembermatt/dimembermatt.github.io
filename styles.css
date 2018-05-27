@@ -1,7 +1,8 @@
 body {
   background-color: darkslategrey;
   padding: 20px;
-  background: darkslategrey;
+  background-image: url("file:///C:/Users/matth/OneDrive/Documents/GitHub/dimembermatt.github.io/concorde.jpg");
+  background-size: contain;
   color: azure;
   font-family: monospace;
   font-size: 100%;
@@ -78,6 +79,17 @@ p {
 
 img {
   vertical-align: middle;
+  height: 450px;
+}
+/*this is super whacky -image reorientation*/
+.flipped {
+  transform: rotate(180deg);
+}
+.rotateCounterClockwise {
+  transform: rotate(-90deg);
+}
+.rotateClockwise {
+  transform: rotate(90deg);
 }
 
 .slideshow-container {
