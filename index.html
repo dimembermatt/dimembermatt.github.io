@@ -11,13 +11,14 @@
 
 <!--body-->
 <body id="main">
+
   <!--side navigation bar-->
   <nav id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Projects</a>>
-    <a href="#">Resume</a>
-    <a href="#">Contact</a>
+    <a href="#Home">Home</a>
+    <a href="#Projects">Projects</a>>
+    <a href="#Resume">Resume</a>
+    <a href="#Contact">Contact</a>
   </nav>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   <script>
@@ -33,7 +34,9 @@
   </script>
   <!--end side bar-->
 
-  <h1>Matthew Yu</h1>
+  <!--top of page-->
+  <a name="Home"></a>
+  <h1>Matthew Yu -site building</h1>
   <h5 id="intro">B.S. Electrical and Computer Engineering (May 2021)<br>
     University of Texas at Austin.</h5>
 
@@ -105,10 +108,87 @@
   </script>
   <!--end slideshow-->
 
-  <p>This is a test.</p>
+  <!--about me-->
+  <div id="newSection">
+    <h2>About Me</h2>
+    <img src="images/me.jpg" alt="images/me2.jpg" style="float:left;width:150px;height:200px;"
+      hspace="25">
+    <p>
+      Hello, my name is Matthew and I'm asophomore at the University of Texas at Austin.
+      I'm majoring in electrical and computer engineering, and aspiring to work in all
+      things robotics. My current interests are embedded systems, computer vision, virtual reality,
+      and machine learning.
+      <br><br>
+      Feel free to explore my projects and work!
+    </p>
+  </div>
+  <!--coursework-->
+  <div id="newSection">
+    <h3>Coursework</h3>
+    <button class="accordion">EE302 - Intro to Electrical Engineering</button>
+    <div class="panel">
+      <a href="http://www.ece.utexas.edu/undergraduate/courses/302">Course Summary Link</a>
+      <p style="padding-left:0;">EE302 Final Project</p>
+    </div>
+    <button class="accordion">EE306 - Intro to Computing</button>
+    <div class="panel">
+      <a href="http://www.ece.utexas.edu/undergraduate/courses/306">Course Summary Link</a>
+      <p style="padding-left:0;">EE306 Labs and independent projects</p>
+    </div>
+    <button class="accordion">EE319k - Intro to Embedded Systems</button>
+    <div class="panel">
+      <a href="http://www.ece.utexas.edu/undergraduate/courses/319k">Course Summary Link</a>
+      <p style="padding-left:0;">EE319 Final Project and Independent Projects</p>
+    </div>
+    <button class="accordion">UGS302 - How Things Work</button>
+    <div class="panel">
+      <p style="padding-left:0;"> Summary: This undergraduate signature course focuses on
+        customer research, product design, and prototyping. Student groups choose a product
+        to work on and then design it from scratch, learning skills in product requirements,
+        CADding, programming, and the design process.<br>
+        Project Page here --> *****
+      </p>
+    </div>
+  </div>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+  </script>
+  <!--end coursework-->
+
+  <!--projects-->
+  <a name="Projects"></a>
+  <div id="newSection">
+    <h2>Projects</h2>
+  </div>
+  <!--resume-->
+  <a name="Resume"></a>
+  <div id="newSection">
+    <h2>Resume</h2>
+  </div>
+  <!--contact-->
+  <a name="Contact"></a>
+  <div id="newSection">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:dimembermatt@gmail.com"> dimembermatt@gmail.com</a></p>
+    <p>Github: <a href="https://github.com/dimembermatt"> github.com/dimembermatt</a></p>
+  </div>
+
 </body>
 
 <footer id="footer">
-  <p>Created by: Matthew Yu </p>
+  <p>Created by: Matthew Yu, 2018 </p>
 </footer>
 </html>
