@@ -1,8 +1,8 @@
 body {
   background-color: darkslategrey;
   padding: 20px;
-  background-image: url("file:///C:/Users/matth/OneDrive/Documents/GitHub/dimembermatt.github.io/concorde.jpg");
-  background-size: contain;
+  background-image: url("concorde.jpg");
+  background-size: cover;
   color: azure;
   font-family: monospace;
   font-size: 100%;
@@ -84,6 +84,7 @@ img {
 /*this is super whacky -image reorientation*/
 .flipped {
   transform: rotate(180deg);
+  display: inline-block;
 }
 .rotateCounterClockwise {
   transform: rotate(-90deg);
