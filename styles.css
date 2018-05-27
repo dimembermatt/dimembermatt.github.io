@@ -1,7 +1,7 @@
 body {
   background-color: darkslategrey;
   padding: 20px;
-  background-image: url("concorde.jpg");
+  background-image: url("https://github.com/dimembermatt/dimembermatt.github.io/blob/master/concorde.jpg");
   background-size: cover;
   color: azure;
   font-family: monospace;
@@ -83,14 +83,22 @@ img {
 }
 /*this is super whacky -image reorientation*/
 .flipped {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   display: inline-block;
 }
 .rotateCounterClockwise {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  display: inline-block;
 }
 .rotateClockwise {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  display: inline-block;
 }
 
 .slideshow-container {
