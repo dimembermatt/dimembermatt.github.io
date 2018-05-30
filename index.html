@@ -43,35 +43,35 @@
   <!--slideshow-->
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="media\clouds_1.jpg" style="width:100%">
+      <img src="media\clouds_1.jpg">
       <div class="numbertext">1 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img src="media\overlook.jpg" style="width:100%">
+      <img src="media\overlook.jpg">
       <div class="numbertext">2 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img class="flipped" src="media\Plano_East_1.jpg" style="width:100%">
+      <img class="flipped" src="media\Plano_East_1.jpg">
       <div class="numbertext">3 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img src="media\window.jpg" style="width:100%">
+      <img src="media\window.jpg">
       <div class="numbertext">4 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img class="flipped" src="media\Russell_Creek_lake.jpg" style="width:100%">
+      <img class="flipped" src="media\Russell_Creek_lake.jpg">
       <div class="numbertext">5 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img class="flipped" src="media\tennis_courts_2.jpg" style="width:100%">
+      <img class="flipped" src="media\tennis_courts_2.jpg">
       <div class="numbertext">6 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img src="media\trees.jpg" style="width:100%">
+      <img src="media\trees.jpg">
       <div class="numbertext">7 / 8</div>
     </div>
     <div class="mySlides fade">
-      <img class="flipped" src="media\contrail.jpg" style="width:100%">
+      <img class="flipped" src="media\contrail.jpg">
       <div class="numbertext">8 / 8</div>
     </div>
   </div>
@@ -118,13 +118,24 @@
       I'm majoring in electrical and computer engineering, and aspiring to work in all
       things robotics. My current interests are embedded systems, computer vision, virtual reality,
       and machine learning.
-      <br><br>
+      <br>
       Feel free to explore my projects and work!
     </p>
+    <pre style="font-size:11px;text-align:right">
+       <i>Had I the heaven's embroidered cloths,
+      Enwrought with golden and silver light,
+      The blue and the dim and the dark cloths
+      Of night and light and the half-light;
+      I would spread the cloths under your feet:
+      But I, being poor, have only my dreams;
+      I have spread my dreams under your feet;
+      Tread softly because you tread on my dreams.</i>
+      William B. Yeats
+    </pre>
   </div>
   <!--coursework-->
   <div id="newSection">
-    <h3>Coursework</h3>
+    <h2>Coursework</h2>
     <button class="accordion">EE302 - Intro to Electrical Engineering</button>
     <div class="panel">
       <!--description text and links-->
@@ -371,9 +382,12 @@
             <p>This is the very sketchy circuit for the control box of the pet feeder.
               A problem we had to work with during prototyping was the small size of
               the 3d printed control box, so it took a couple of hours to get the circuit
-              design slim enough to fit (wires, potentiometer knobs, power cord and all).</p>
+              design slim enough to fit (wires, potentiometer knobs, power cord and all).
+            </p>
             <p>We had to make a lategame design change to chisel a hole in the side wall of
-              the wooden plank to get fit the power cord into the barrel jack of the arduino.</p>
+              the wooden plank to get the power cord to fit into the barrel jack of the arduino.
+              I don't know about other people, but I thought that was kinda ingenious...
+            </p>
           </div>
         </div>
       </div>
@@ -417,10 +431,279 @@
   <!--end coursework-->
 
   <!--projects-->
-  <a name="Projects"></a>
+  <a name="Projects and Organizations"></a>
   <div id="newSection">
     <h2>Projects</h2>
+
+    <!--projects grid-->
+    <div class="row">
+      <div class="column" onclick="openTab('b1');" style="background:#4d8ccb;">
+        <h3>IEEE RAS</h3>
+      </div>
+      <div class="column" onclick="openTab('b2');" style="background:#4d4dcb;">
+        <h3>ASME Rube Goldberg</h3>
+      </div>
+      <div class="column" onclick="openTab('b3');" style="background:#8c4dcb;">
+        <h3>Hackathons</h3>
+      </div>
+      <div class="column" onclick="openTab('b4');" style="background:#cb4dcb;">
+        <h3>myDPA</h3>
+      </div>
+      <div class="column" onclick="openTab('b5');" style="background:#cb4d8c;">
+        <h3>Hello Tree</h3>
+      </div>
+    </div>
+    <!--end projects grid-->
+    <!--project descriptions-->
+    <div id="b1" class="containerTab" style="height:100%;display:block;background:#4d8ccb">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>IEEE RAS</h2>
+      <h4>2017-2018</h4>
+      <p>
+        The IEEE Robotics and Automation Society is a large organization at the
+        University of Texas at Austin, numbering hundreds of members who actively
+        participate in projects and community outreach across majors and colleges.
+      </p>
+      <p>
+        This school year, I participated as a member of the Region V,
+        PacBot, and Robotathon committees.
+      </p>
+      <hr>
+      <!--Robotathon-->
+      <h2>Robotathon</h2>
+      <div style="overflow:auto">
+        <div id="txt1 1" class="companion_box right">
+          <p>
+            Definitely a highlight of my freshman year, Robotathon was a fast-paced
+            month where teams of four build autonomous robots to achieve an objective.
+            This year the theme was "RAScars", and we had to design a robot that could
+            maneuver an obstacle field to reach the other opponent's RAScar.
+          </p>
+        </div>
+        <div id="pic1 2" class="companion_box left">
+            <img src="media\Organizations\Robotathon\assembling_the_picobot.jpg">
+            <div class="caption">
+              <h4 style="text-align:center">Final Product: The Pico Bot</h4>
+              <p>
+                Our Robotathon RAScar, the Picobot simple design mowed
+                down the competition during the competition.
+              </p>
+            </div>
+        </div>
+        <div id="pic2 4" class="companion_box right">
+          <img src="media\Organizations\Robotathon\picobot_chassis.jpg">
+          <div class="caption">
+            <p>
+              PicoBot's top half, waiting for glue to set. Access holes for wires and such,
+              and the cuts on the sides for the servo motorss.
+            </p>
+          </div>
+        </div>
+        <div id="txt2 3" class="companion_box left">
+          <p>
+            During the Robotathon Kickoff and the following workshops, we attended
+            seminars that taught us the basics to get us started on our robot. CADding
+            in Solidworks, writing sensor control loops using Rasware (<i>"A generic
+            robotics controller for the EK-LM4F120XL Stellaris Launchpad<"</i>), even
+            how to use Ubuntu.
+          </p>
+        </div>
+        <div id="txt3 5" class="companion_box left">
+          <p>
+            In this project, I participated in the creation of the mechanical design
+            for the PicoBot, CADding the first iteration prototype. The design in its
+            second iteration has two layers, the second with an access hole cut to allow
+            access to the top and bottom ports of the Launchpad, and providing more space
+            for components such as the circuit and the sensors. The front end is angular
+            to push obstacle blocks out of the way. Our algorithm setup was pretty simple
+            in that we decided to use only the line sensor array in order to traverse the field.
+            I laser cut both the prototypes (one of my favorite skills I learned this year),
+            learning both how to operate the machines and the RetinaEngrave proprietary software.
+          </p>
+        </div>
+        <div id="pic3 6" class="companion_box right">
+          <img src="media\Organizations\Robotathon\Field_and_rascars.jpg" style="width:500px;height:300px">
+          <div class="caption">
+            <p>
+              The field we helped hastily assemble the night before competition for
+              testing. Oh, and the tower of doom. There was an issue of the incline
+              being too high/too low friction/too jilted for a lot of RAScars to get
+              over, but that was settled by next morning.
+            </p>
+          </div>
+        </div>
+        <div id="pic4 8" class="companion_box left">
+          <img src="media\Organizations\Robotathon\2nd_place.jpg">
+          <div class="caption">
+            <p>
+              2nd Place...Not 1st but not bad.
+            </p>
+          </div>
+        </div>
+        <div id="txt4 7" class="companion_box right">
+          <p>
+            During the competition, our robot stomped the adversaries, driving through
+            undefeated to win the finals. There were a lot of hiccups along the way, like
+            getting stuck on field edges or losing sight of the track lines, but Picobot
+            survived.
+          </p>
+          <p>
+            We lost first place in overall points (by a measly 6 points) since the 2nd place team
+            did more challenges than us (the dratted wall sensing!), but we took home a nice
+            trophy for commemoration.
+          </p>
+        </div>
+      </div>
+      <script>
+        var shiftLen;
+        var box = document.getElementsByClassName("companion_box");
+        for(i = 0; i < box.length; i++){
+           shiftLen = Math.random() * 80;
+           box[i].style.setProperty('--shift', shiftLen + 'px');
+        }
+      </script>
+      <!--end Robotathon-->
+      <hr>
+      <!--Region V-->
+      <h2>Region V</h2>
+      <div style="overflow:auto">
+        <div id="txt1 1" class="companion_box right">
+          <p>
+            Definitely a highlight of my freshman year, Robotathon was a fast-paced
+            month where teams of four build autonomous robots to achieve an objective.
+            This year the theme was "RAScars", and we had to design a robot that could
+            maneuver an obstacle field to reach the other opponent's RAScar.
+          </p>
+        </div>
+        <div id="pic1 2" class="companion_box left">
+            <img src="media\Organizations\Robotathon\assembling_the_picobot.jpg">
+            <div class="caption">
+              <h4 style="text-align:center">Final Product: The Pico Bot</h4>
+              <p>
+                Our Robotathon RAScar, the Picobot simple design mowed
+                down the competition during the competition.
+              </p>
+            </div>
+        </div>
+        <div id="pic2 4" class="companion_box right">
+          <img src="media\Organizations\Robotathon\picobot_chassis.jpg">
+          <div class="caption">
+            <p>
+              PicoBot's top half, waiting for glue to set. Access holes for wires and such,
+              and the cuts on the sides for the servo motorss.
+            </p>
+          </div>
+        </div>
+        <div id="txt2 3" class="companion_box left">
+          <p>
+            During the Robotathon Kickoff and the following workshops, we attended
+            seminars that taught us the basics to get us started on our robot. CADding
+            in Solidworks, writing sensor control loops using Rasware (<i>"A generic
+            robotics controller for the EK-LM4F120XL Stellaris Launchpad<"</i>), even
+            how to use Ubuntu.
+          </p>
+        </div>
+        <div id="txt3 5" class="companion_box left">
+          <p>
+            In this project, I participated in the creation of the mechanical design
+            for the PicoBot, CADding the first iteration prototype. The design in its
+            second iteration has two layers, the second with an access hole cut to allow
+            access to the top and bottom ports of the Launchpad, and providing more space
+            for components such as the circuit and the sensors. The front end is angular
+            to push obstacle blocks out of the way. Our algorithm setup was pretty simple
+            in that we decided to use only the line sensor array in order to traverse the field.
+            I laser cut both the prototypes (one of my favorite skills I learned this year),
+            learning both how to operate the machines and the RetinaEngrave proprietary software.
+          </p>
+        </div>
+        <div id="pic3 6" class="companion_box right">
+          <img src="media\Organizations\Robotathon\Field_and_rascars.jpg" style="width:500px;height:300px">
+          <div class="caption">
+            <p>
+              The field we helped hastily assemble the night before competition for
+              testing. Oh, and the tower of doom. There was an issue of the incline
+              being too high/too low friction/too jilted for a lot of RAScars to get
+              over, but that was settled by next morning.
+            </p>
+          </div>
+        </div>
+        <div id="pic4 8" class="companion_box left">
+          <img src="media\Organizations\Robotathon\2nd_place.jpg">
+          <div class="caption">
+            <p>
+              2nd Place...Not 1st but not bad.
+            </p>
+          </div>
+        </div>
+        <div id="txt4 7" class="companion_box right">
+          <p>
+            During the competition, our robot stomped the adversaries, driving through
+            undefeated to win the finals. There were a lot of hiccups along the way, like
+            getting stuck on field edges or losing sight of the track lines, but Picobot
+            survived.
+          </p>
+          <p>
+            We lost first place in overall points (by a measly 6 points) since the 2nd place team
+            did more challenges than us (the dratted wall sensing!), but we took home a nice
+            trophy for commemoration.
+          </p>
+        </div>
+      </div>
+      <script>
+        var shiftLen;
+        var box = document.getElementsByClassName("companion_box");
+        for(i = 0; i < box.length; i++){
+           shiftLen = Math.random() * 80;
+           box[i].style.setProperty('--shift', shiftLen + 'px');
+        }
+      </script>
+
+
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:#4d4dcb">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>ASME Rube Goldberg</h2>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat,
+        te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad
+      </p>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:#8c4dcb">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>Hackathons</h2>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat,
+        te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad
+      </p>
+    </div>
+    <div id="b4" class="containerTab" style="display:none;background:#cb4dcb">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>IEEE RAS Region V</h2>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat,
+        te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad
+      </p>
+    </div>
+    <div id="b5" class="containerTab" style="display:none;background:#cb4d8c">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>IEEE RAS Region V</h2>
+      <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat,
+        te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad
+      </p>
+    </div>
+    <script>
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+
+
+
+    <!--end project descriptions-->
   </div>
+
   <!--resume-->
   <a name="Resume"></a>
   <div id="newSection">

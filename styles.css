@@ -1,3 +1,6 @@
+:root {
+  --shift: 10px;
+}
 body {
   background-color: darkslategrey;
   padding: 20px;
@@ -37,12 +40,34 @@ a:active {
     text-decoration: underline;
 }
 
+
+/*this is super whacky -image reorientation*/
+.flipped {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  display: inline-block;
+}
+.rotateCounterClockwise {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  display: inline-block;
+}
+.rotateClockwise {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  display: inline-block;
+}
+/*end img orientation*/
+
 #intro {
   font-size: .9em;
 }
 #newSection {
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 #footer {
   position: fixed;
@@ -75,7 +100,6 @@ a:active {
     display: block;
     transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -96,48 +120,20 @@ a:active {
   .sidenav a {font-size: 18px;}
 }
 
+
 /*slideshow*/
 .mySlides {
   display: none;
 }
-
-img {
+.mySlides img {
   vertical-align: middle;
   height: 450px;
+  width: 100%;
 }
-/*this is super whacky -image reorientation*/
-.flipped {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  display: inline-block;
-}
-.rotateCounterClockwise {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  display: inline-block;
-}
-.rotateClockwise {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  display: inline-block;
-}
-
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
 }
 .numbertext {
   color: #f2f2f2;
@@ -149,14 +145,15 @@ img {
 .dot {
   height: 15px;
   width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  margin: 30px 2px;
+  background-color: black;
+
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .active {
-  background-color: #717171;
+  color: white;
 }
 .fade {
   -webkit-animation-name: fade;
@@ -168,7 +165,6 @@ img {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -198,7 +194,6 @@ img {
     overflow: hidden;
     color:black;
 }
-
 
 /*card flip */
 #f1_container, #f1_video_container {
@@ -251,4 +246,63 @@ img {
 }
 .face.back p{
   font-size: .75em;
+}
+
+/*expanding grid*/
+.column {
+    float: left;
+    width: 20%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    opacity: .65;
+}
+.containerTab {
+    padding: 20px;
+    color: white;
+}
+.column:hover {
+    opacity: 1.0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.companion_box {
+  margin: 5px;
+  max-height: 40%;
+  width: 40%;
+  background-color: #6b6bc7;
+}
+.companion_box img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+.companion_box.caption{
+  height: 20%;
+  text-align: center;
+  overflow: scroll;
+}
+.companion_box.left {
+  float: left;
+  margin-left: calc(5px + var(--shift));
+}
+.companion_box.right {
+  float: right;
+  margin-right: calc(5px + var(--shift));
 }
