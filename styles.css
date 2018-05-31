@@ -11,8 +11,8 @@ body {
   font-size: 100%;
 }
 h1 {
-    color: coral;
-    font-size: 2.5em;
+  color: coral;
+  font-size: 2.5em;
 }
 p {
   padding-left: 5%;
@@ -25,21 +25,20 @@ a:link {
   background-color: transparent;
 }
 a:visited {
-    color: coral;
-    background-color: transparent;
-    text-decoration: none;
+  color: coral;
+  background-color: transparent;
+  text-decoration: none;
 }
 a:hover {
-    color: slateblue;
-    background-color: transparent;
-    text-decoration: underline;
+  color: slateblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 a:active {
-    color: white;
-    background-color: transparent;
-    text-decoration: underline;
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
 }
-
 
 /*this is super whacky -image reorientation*/
 .flipped {
@@ -62,6 +61,11 @@ a:active {
 }
 /*end img orientation*/
 
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  padding-bottom: 180px;
+}
 #intro {
   font-size: .9em;
 }
@@ -93,12 +97,12 @@ a:active {
   transition: 0.5s;
 }
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 .sidenav a:hover {
   color: #f1f1f1;
@@ -110,16 +114,10 @@ a:active {
   font-size: 36px;
   margin-left: 50px;
 }
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-    padding-bottom: 180px;
-}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
 
 /*slideshow*/
 .mySlides {
@@ -147,7 +145,6 @@ a:active {
   width: 15px;
   margin: 30px 2px;
   background-color: black;
-
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -187,12 +184,12 @@ a:active {
   background-color: #ccc;
 }
 .panel {
-    font-size: 15px;
-    padding: 0 18px;
-    display: none;
-    background-color: #ccd9ff;
-    overflow: hidden;
-    color:black;
+  font-size: 15px;
+  padding: 0 18px;
+  display: none;
+  background-color: #ccd9ff;
+  overflow: hidden;
+  color:black;
 }
 
 /*card flip */
@@ -250,36 +247,39 @@ a:active {
 
 /*expanding grid*/
 .column {
-    float: left;
-    width: 20%;
-    height: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 14px;
-    cursor: pointer;
-    color: white;
-    opacity: .65;
+  float: left;
+  width: 20%;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  opacity: .65;
 }
 .containerTab {
-    padding: 20px;
-    color: white;
+  height:100%;
+  display:none;
+  padding: 20px;
+  color: white;
 }
 .column:hover {
-    opacity: 1.0;
+  opacity: 1.0;
 }
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .closebtn {
-    float: right;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 
+/*variable size box layout*/
 .companion_box {
   margin: 5px;
   max-height: 40%;
@@ -293,6 +293,15 @@ a:active {
   margin: auto;
   object-fit: cover;
 }
+
+.companion_box video{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+
 .companion_box.caption{
   height: 20%;
   text-align: center;
@@ -300,9 +309,9 @@ a:active {
 }
 .companion_box.left {
   float: left;
-  margin-left: calc(5px + var(--shift));
+  margin-left: var(--shift);
 }
 .companion_box.right {
   float: right;
-  margin-right: calc(5px + var(--shift));
+  margin-right: var(--shift);
 }
