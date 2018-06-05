@@ -16,7 +16,7 @@
   <nav id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#Home">Home</a>
-    <a href="#Projects">Projects</a>>
+    <a href="#Projects and Organizations">Projects and Orgs</a>>
     <a href="#Resume">Resume</a>
     <a href="#Contact">Contact</a>
   </nav>
@@ -467,7 +467,7 @@
   <!--projects-->
   <a name="Projects and Organizations"></a>
   <div id="newSection">
-    <h2>Projects</h2>
+    <h2>Projects and Orgs</h2>
     <!--projects grid-->
     <div class="row">
       <div class="column" onclick="openTab('b1');" style="background:#4d8ccb;">
@@ -592,7 +592,7 @@
           var shiftLen;
           var box = document.getElementsByClassName("companion_box");
           for(i = 0; i < box.length; i++){
-             shiftLen = Math.random() * 60;
+             shiftLen = Math.random() * 40;
              box[i].style.setProperty('--shift', shiftLen + 'px');
           }
         </script>
@@ -678,7 +678,7 @@
           var shiftLen;
           var box = document.getElementsByClassName("companion_box");
           for(i = 0; i < box.length; i++){
-             shiftLen = Math.random() * 60;
+             shiftLen = Math.random() * 40;
              box[i].style.setProperty('--shift', shiftLen + 'px');
           }
         </script>
@@ -711,14 +711,6 @@
               </p>
             </div>
           </div>
-          <div id="pic1" class="companion_box left">
-            <img src="media\Organizations\PacBot\pacbot_comparison.jpg">
-            <div class="caption">
-              <p>
-                Our PacBot, compared to the size of a quarter.
-              </p>
-            </div>
-          </div>
           <div id="txt2" class="companion_box right">
             <p>
               I took a role closer to my ECE major in this committee, and was involved
@@ -727,7 +719,15 @@
               with the VL6180X time of flight sensor.
             </p>
           </div>
-          <div id="vid1" class="companion_box right">
+          <div id="pic1" class="companion_box left">
+            <img src="media\Organizations\PacBot\pacbot_comparison.jpg">
+            <div class="caption">
+              <p>
+                Our PacBot, compared to the size of a quarter.
+              </p>
+            </div>
+          </div>
+          <div id="vid2" class="companion_box right">
             <video controls>
               <source src="media\Organizations\PacBot\pacbot2.mp4" type="video/mp4">
             </video>
@@ -739,8 +739,8 @@
               </p>
             </div>
           </div>
-          <div id="pic1" class="companion_box left">
-            <img class="rotateClockwise" src="media\Organizations\PacBot\trophy.jpg" style="width: 360px;height:290px;">
+          <div id="pic2" class="companion_box left">
+            <img class="rotateClockwise" src="media\Organizations\PacBot\trophy.jpg" style="width: 238px;height:235px;">
             <div class="caption">
               <p>
                 Our PacBot third place trophy!
@@ -762,7 +762,7 @@
           var shiftLen;
           var box = document.getElementsByClassName("companion_box");
           for(i = 0; i < box.length; i++){
-             shiftLen = Math.random() * 60;
+             shiftLen = Math.random() * 40;
              box[i].style.setProperty('--shift', shiftLen + 'px');
           }
         </script>
@@ -793,7 +793,7 @@
             </p>
           </div>
           <div id="pic1" class="companion_box left">
-            <img class="rotateClockwise" src="media\Organizations\Rube\Rube.jpg" style="height:290px;">
+            <img class="rotateClockwise" src="media\Organizations\Rube\Rube.jpg" style="height:290px;width:295px;">
             <div class="caption">
               <p>
                 The gang setting up a test run for the people at Reliant.
@@ -872,7 +872,7 @@
           var shiftLen;
           var box = document.getElementsByClassName("companion_box");
           for(i = 0; i < box.length; i++){
-             shiftLen = Math.random() * 60;
+             shiftLen = Math.random() * 40;
              box[i].style.setProperty('--shift', shiftLen + 'px');
           }
         </script>
@@ -915,7 +915,7 @@
           var shiftLen;
           var box = document.getElementsByClassName("companion_box");
           for(i = 0; i < box.length; i++){
-             shiftLen = Math.random() * 60;
+             shiftLen = Math.random() * 40;
              box[i].style.setProperty('--shift', shiftLen + 'px');
           }
         </script>
@@ -973,6 +973,9 @@
 </body>
 
 <footer id="footer" style="z-index:7">
-  <p>Created by: Matthew Yu, 2018 </p>
+  <p>
+    Created by: Matthew Yu, 2018 <br>
+    <div style="font-size:9px;padding-left:5%;">Optimized for half and full-screen Chrome and Edge. View at your own discretion.</div>
+  </p>
 </footer>
 </html>
