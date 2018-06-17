@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- LANDING PAGE-->
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,7 +7,7 @@
 <!--header-->
 <head>
   <title>Home</title>
-  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="styles3.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120550704-1"></script>
   <script>
@@ -34,86 +35,132 @@
           $(tag).addClass("visible")
         }else{
           $(tag).removeClass("visible")
+          /*$(tag).addClass("visible")*/
         }
       }
     });
   </script>
 
 </head>
-<!--frontpage-->
+
 <!--body-->
 <body>
-
   <!--title-->
   <div style="background-color:rgb(255, 255, 255, .7); width:60%; margin:auto;padding-left:1em;padding-right:1em;">
     <h1 style="margin-bottom:0;">Think Forwards</h1>
     <h2 style="margin-top:0;margin-bottom:.5em;text-align:right;color:rgb(0, 128, 255);"><i>Break Barriers</i></h2>
- </div>
-  <!--/title-->
+  </div>
 
-<div class="flex-container">
-    <!--bg pic-->
-    <img src="media\trees.jpg" style="position:absolute;width:90%;left: 5%;top:2%;z-index: -1;border-radius:10px;">
+  <!--bg pic-->
+  <img src="media\Slideshow\trees.jpg" style="position:absolute;width:90%;left: 5%;top:3%;z-index: -1;border-radius:10px;">
+
+  <div class="flex-container">
     <!--profile pic-->
-    <section class="delay" style="flex-grow: 0; margin-left:auto; margin-right:auto; box-shadow: none; background-color: rgba(0, 0, 0, .0)">
+    <section class="single delay" style="box-shadow: none; background-color: rgba(0, 0, 0, .0)">
       <div id="profile_pic">
       </div>
     </section>
-    <!--intro-->\
-    <div style="background-color:rgb(152, 172, 179, .85); width:80%; text-align:center;margin-bottom:10px;">
+    <!--student description-->
+    <section class="single visible" style="margin:5px 10%;">
       <h5>B.S. Electrical and Computer Engineering | May 2021 <br>University of Texas at Austin</h5>
-    </div>
-  </div>
-<!------------------------------------------------------------------->
-  <div class="flex-container">
-    <!--about me-->
-    <section class="delay" style="flex-grow: 999;background-color: rgb(122, 153, 184);">
+    </section>
+    <!--Introduction 1-->
+    <section class="single delay">
       <p>
-        <div style="font-size:2em;">
-          <b><u>Hello, I'm Matthew.</u></b>
-        </div>
+        <b style="font-size:2em;"><u>Hello, I'm Matthew.</u></b><br>
         I'm a sophomore at the University of Texas at Austin
-        majoring in electrical and computer engineering, aspiring to work in all
-        things robotics.
+        majoring in electrical and computer engineering.
+        I aspire to work in all things robotics.
       </p>
+
+
     </section>
-    <!--pictures-->
-    <!--fix this !!! 6/11/18-->
-    <section style="flex-grow: 999;width:100%" id="window ">
-      <div class="flex-container" >
-        <p>flex container in a section</p>
+    <!--slideshow-->
+    <section class="single " >
+      <div class="slideshow">
+        <!--Introduction 2-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/concorde_short.jpg');background-size: cover;">
+          <h3>Driven.</h3>
+          <p style="margin-bottom: 0;">
+            For me,
+          </p>
+          <h3 style="color: black;text-align: center;font-family:'Nothing You Could Do', cursive;"><b>Work is play.</b></h3>
+          <p style="margin-top: 0;">
+            I love building things, and I believe that quality shows through hard work and adversity.
+          </p>
+          <div class="numbertext">1 / 8</div>
+        </div>
+        <!--Introduction 3-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/Window.jpg');background-size: cover;">
+          <h3 style="color:white;">Multifaceted.</h3>
+          <p>
+            From C to ARM to Python to HTML/CSS and beyond,
+            I've touched base with a variety of languages.
+          </p>
+          <p>
+            In addition, I've worked with projects over a variety of platforms, including
+            <ul>Linux</ul>
+            <ul>Solidworks</ul>
+            <ul>Git and Github</ul>
+            <ul>Craftware</ul>
+            <ul>CLion</ul>
+            <ul>Android Studio</ul>
+            <ul>and more...</ul>
+          <p>
+            Love to learn for learning's sake.
+          </p>
+          <div class="numbertext">2 / 8</div>
+        </div>
+        <!--Introduction 4-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/clouds_1.jpg');background-size: cover;">
+          <h3 style="color: white;">Dreamer.</h3>
+          <p style="color: black;">
+            <b>I have big ideas, and burning ambition. Virtual reality? Autonomous robots?
+            Space exploration? I want a piece of all the pies.</b>
+          </p>
+          <div class="numbertext">3 / 8</div>
+        </div>
+        <!--Introduction 5-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/grass_landscape_2014.jpg');background-size: cover;">
+          <h3 style="color: black;">Creator.</h3>
+          <p style="color: black;">
+            <b>From writing and poetry, to music, to design and embedded systems projects, I love
+            seeing the beauty in what's around me and in what I do.</b>
+          </p>
+          <div class="numbertext">4 / 8</div>
+        </div>
+        <!--Introduction 6-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/grass_landscape_2014.jpg');background-size: cover;">
+          <h3 style="color: black;">Creator.</h3>
+          <p style="color: black;">
+            <b>From writing and poetry, to music, to design and embedded systems projects, I love
+            seeing the beauty in what's around me and in what I do.</b>
+          </p>
+          <div class="numbertext">5 / 8</div>
+        </div>
+
       </div>
-    </section>
-    <!--/about me-->
-    <!--projects-->
-    <section style="flex-grow: 1;">
-      <h3>Projects</h3>
-    </section>
-    <!--coursework-->
-    <section style="flex-grow: 1;">
-      <h3>Coursework</h3>
-    </section>
-    <!--organizations-->
-    <section style="flex-grow: 1;">
-      <h3>Resume</h3>
-    </section>
-    <!--old site-->
-    <section style="flex-grow: 1;">
-      <h3>Site</h3>
-      <a href="old.html">Old Site</a>
-    </section>
-    <!--resume-->
-    <section style="flex-grow: 1;">
-      <h3>Projects</h3>
+      <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+      </script>
     </section>
   </div>
 
-
-  <!--contact me-->
-  <div>
-  </div>
-  <!--/contact me-->
 </body>
+
 <footer>
 </footer>
 </html>
