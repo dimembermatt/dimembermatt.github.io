@@ -88,28 +88,19 @@
           <p style="margin-top: 0;">
             I love building things, and I believe that quality shows through hard work and adversity.
           </p>
-          <div class="numbertext">1 / 8</div>
+          <div class="numbertext">1 / 6</div>
         </div>
         <!--Introduction 3-->
-        <div class="slide fade" style="background-image: url('media/Slideshow/Window.jpg');background-size: cover;">
+        <div class="slide fade" style="background-image: url('media/Slideshow/window.jpg');background-size: cover;">
           <h3 style="color:white;">Multifaceted.</h3>
           <p>
             From C to ARM to Python to HTML/CSS and beyond,
             I've touched base with a variety of languages.
           </p>
           <p>
-            In addition, I've worked with projects over a variety of platforms, including
-            <ul>Linux</ul>
-            <ul>Solidworks</ul>
-            <ul>Git and Github</ul>
-            <ul>Craftware</ul>
-            <ul>CLion</ul>
-            <ul>Android Studio</ul>
-            <ul>and more...</ul>
-          <p>
-            Love to learn for learning's sake.
+            I love to learn for learning's sake.
           </p>
-          <div class="numbertext">2 / 8</div>
+          <div class="numbertext">2 / 6</div>
         </div>
         <!--Introduction 4-->
         <div class="slide fade" style="background-image: url('media/Slideshow/clouds_1.jpg');background-size: cover;">
@@ -118,7 +109,7 @@
             <b>I have big ideas, and burning ambition. Virtual reality? Autonomous robots?
             Space exploration? I want a piece of all the pies.</b>
           </p>
-          <div class="numbertext">3 / 8</div>
+          <div class="numbertext">3 / 6</div>
         </div>
         <!--Introduction 5-->
         <div class="slide fade" style="background-image: url('media/Slideshow/grass_landscape_2014.jpg');background-size: cover;">
@@ -127,18 +118,15 @@
             <b>From writing and poetry, to music, to design and embedded systems projects, I love
             seeing the beauty in what's around me and in what I do.</b>
           </p>
-          <div class="numbertext">4 / 8</div>
+          <div class="numbertext">4 / 6</div>
         </div>
-        <!--Introduction 6-->
-        <div class="slide fade" style="background-image: url('media/Slideshow/grass_landscape_2014.jpg');background-size: cover;">
-          <h3 style="color: black;">Creator.</h3>
-          <p style="color: black;">
-            <b>From writing and poetry, to music, to design and embedded systems projects, I love
-            seeing the beauty in what's around me and in what I do.</b>
-          </p>
-          <div class="numbertext">5 / 8</div>
+        <!--pictures-->
+        <div class="slide fade" style="background-image: url('media/Slideshow/trees.jpg');background-size: cover;">
+          <div class="numbertext">5 / 6</div>
         </div>
-
+        <div class="slide fade" style="background-image: url('media/Slideshow/East_baseball_field.jpg');background-size: cover;">
+          <div class="numbertext">6 / 6</div>
+        </div>
       </div>
       <script>
         var slideIndex = 0;
@@ -157,10 +145,74 @@
         }
       </script>
     </section>
-  </div>
+    <!--summaries-->
+    <section class="hover" style="flex-basis: 24%;">
+      <button onclick="accordion(this)" id="0"><h3>Projects</h3></button>
+    </section>
+    <section class="hover" style="flex-basis: 24%;">
+      <button onclick="accordion(this)" id="1"><h3>Coursework</h3></button>
+    </section>
+    <section class="hover" style="flex-basis: 24%;">
+        <button onclick="accordion(this)" id="2"><h3>Resume</h3></button>
+    </section>
+    <section class="hover" style="flex-basis: 24%;">
+      <button onclick="accordion(this)" id="3"><h3>Old Site</h3></button>
+    </section>
 
+    <!--accordion panels-->
+    <!--TODO: fill with content, hyperlink ref to internal webpages-->
+    <div class="panel none">
+      <p>test Projects</p>
+    </div>
+    <div class="panel none">
+      <p>test Coursework</p>
+    </div>
+    <div class="panel none">
+      <p>test Resume</p>
+    </div>
+    <div class="panel none">
+      <p>test Old Site</p>
+    </div>
+    <script>
+      function accordion(ele) {
+        var id = ele.id
+        var panels = $(".panel")
+        for (var i = 0; i < panels.length; i++){
+          if (i != id){
+            $(panels[i]).addClass("none")
+          }else{
+            $(panels[i]).removeClass("none")
+          }
+        }
+      }
+    </script>
+
+    <!--contact me-->
+    <!--TODO: aesthetic improvements-->
+    <section class="hover single appear-container">
+      <h3 class="">Contact Me</h3>
+      <div class="flex-container">
+        <section class="appear fade">
+          <a href="https://github.com/dimembermatt">
+            <img src="media/Icons/github.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+          </a>
+        </section>
+        <section class="appear fade">
+          <a href="mailto:matthewjkyu@gmail.com">
+            <img src="media/Icons/gmail.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+          </a>
+        </section>
+        <section class="appear fade">
+          <a href="https://www.linkedin.com/in/matthew-yu-126331144/">
+            <img src="media/Icons/linkedin.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+          </a>
+        </section>
+      </div>
+    </section>
+  </div>
 </body>
 
 <footer>
+  <p style="text-align: right">V3 Created June 2018 by Matthew Yu.</p>
 </footer>
 </html>
