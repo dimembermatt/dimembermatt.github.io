@@ -3,12 +3,12 @@
  * Matthew Yu
  */
 var stars = [];
-var speed = 10; //modify speed of star movement
+var speed = 12; //modify speed of star movement
 
 function setup() {
   var cnv = createCanvas(window.innerWidth * .988, window.innerHeight);
   cnv.parent('starfield');
-  for(var i = 0; i < 500; i++) {
+  for(var i = 0; i < 150; i++) {
     stars[i] = new Star();
   }
 }

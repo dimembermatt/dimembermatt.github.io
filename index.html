@@ -31,7 +31,7 @@
       for (var i = 2; i < tags.length; i++) {
         var tag = tags[i]
 
-        if ($(tag).position().top < pageBottom) {
+        if ($(tag).position().top < pageBottom- window.innerHeight/3) {
           $(tag).addClass("visible")
         }else{
           $(tag).removeClass("visible")
@@ -53,26 +53,31 @@
 
 <!--body-->
 <body id="main">
-  <!--title-->
-  <div style="background-color:rgb(255, 255, 255, .7); width:60%; margin:auto;padding-left:1em;padding-right:1em;">
-    <h1 style="margin-bottom:0;">Think Forwards</h1>
-    <h2 style="margin-top:0;margin-bottom:.5em;text-align:right;color:rgb(0, 128, 255);"><i>Break Barriers</i></h2>
-  </div>
   <!--starfield-->
-  <div id='starfield' style="position:absolute;top:0;left:0;z-index:-1;"></div>
+  <div id='starfield'></div>
   <!--bg pic-->
-  <img src="media\Slideshow\trees.jpg" style="position:absolute; width:90%; max-width: 1200px; margin:auto; top:5%; z-index: -1; border-radius:10px;">
+  <img src="media\Slideshow\trees.jpg" style="position:absolute; width:90%; max-width: 1250px; margin:auto; top:8%; z-index: -1; border-radius:10px;">
 
-  <div class="flex-container">
-    <!--profile pic-->
-    <section class="single delay" style="box-shadow: none; background-color: rgba(0, 0, 0, .0)">
-      <div id="profile_pic">
-      </div>
-    </section>
-    <!--student description-->
-    <section class="single visible" style="margin:5px 10%;">
-      <h5>B.S. Electrical and Computer Engineering | May 2021 <br>University of Texas at Austin</h5>
-    </section>
+  <!--title-->
+  <div style="margin-top:calc(20px + .8em);vertical-align: middle;">
+    <div style="background-color:rgb(255, 255, 255, .7); width:60%; margin:auto;padding-left:1em;padding-right:1em;">
+      <h1 style="margin-bottom:0;">Think Forwards</h1>
+      <h2 style="margin-top:0;margin-bottom:.5em;text-align:right;color:rgb(0, 128, 255);"><i>Break Barriers</i></h2>
+    </div>
+    <div class="flex-container">
+      <!--profile pic-->
+      <section class="single delay" style="box-shadow: none; background-color: rgba(0, 0, 0, .0)">
+        <div id="profile_pic">
+        </div>
+      </section>
+      <!--student description-->
+      <section class="single visible" style="margin:5px 10%;">
+        <h5>B.S. Electrical and Computer Engineering | May 2021 <br>University of Texas at Austin</h5>
+      </section>
+    </div>
+  </div>
+
+  <div class="flex-container" style="margin-top: 15%;">
     <!--Introduction 1-->
     <section class="single" id="intro1" style="margin-top:10%;">
       <p>
@@ -178,10 +183,10 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="2">&times;</a>
-      <object data="media\Resume2018v5.pdf" type="application/pdf" style="width:100%;height:90vh;">
+      <object data="media\Resume2018v6.pdf" type="application/pdf" style="width:100%;height:90vh;">
         <p>
           This browser does not support this PDF. Please download the PDF to view it:
-          <a href="media\Resume2018v5.pdf">Download PDF</a>.
+          <a href="media\Resume2018v6.pdf">Download PDF</a>.
         </p>
       </object>
     </div>
