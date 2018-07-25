@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- LANDING PAGE-->
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--header-->
+<head>
+  <title>Projects</title>
+  <link rel="stylesheet" href="styles3.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120550704-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120550704-1');
+  </script>
+  <!--jQuery api host from Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".delay").delay(1000).addClass("visible")
+    });
+    $(document).on("scroll", function() {
+      var pageTop = $(document).scrollTop()
+      var pageBottom = pageTop + $(window).height()
+      var tags = $("section")
+
+      for (var i = 2; i < tags.length; i++) {
+        var tag = tags[i]
+
+        if ($(tag).position().top < pageBottom- window.innerHeight/3) {
+          $(tag).addClass("visible")
+        }else{
+          $(tag).removeClass("visible")
+          /*$(tag).addClass("visible")*/
+        }
+      }
+    });
+  </script>
+  <style>
+    p {font-size:  calc(8px + .75vw);}
+  </style>
+</head>
+
+<body id="main" style="background-color:rgb(242, 242, 166);">
+  <!--title-->
+  <h1>Projects</h1>
+  <div class="flex-container">
+    <section class="delay">
+      <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
+      <img src="media\AudioVisualizer\VisualizerInAction.png" style="margin:auto; width:90%;">
+      <h4>Summer 2018</h4>
+      <hr style="margin:0 10%;">
+      <p>This project was built in collaboration with Ryan Menghani and Gauraang Dheamar
+        at UT. We decided to create a web music visualizer, using MDN's
+        Web Audio API to grab MP3 data and the P5 API to create easy graphics.
+      </p>
+      <p>In particular, this version of the visualizer uses a particle system in which
+        stationary dots are manipulated by their peers. This allowed the visualizer to
+        simulate creative visuals like water waves or fizzy bubbles.
+      </p>
+      <p>One of the features in this application is the use of a rudimentary beat
+        detection; a biquad filter was used on the frequency data analysed from the
+        song and was averaged - when the amplitude of a low frequency was large enough,
+        a "beat" was detected and the visualizer draws a pattern on the canvas
+        (imagine a box cordoned into sections, drawing a pattern means pouring water
+        into some sections and then opening the sections, releasing the water).
+      </p>
+      <p>Another feature is a separate mode, based off of cellular automata. It's
+        very similar to Conway's Game of Life, in which a particle "lives" based on
+        whether 3 or 4 neighboring cells are alive. This gives the visualization a
+        unique shimmering effect where particles warp in and out of existence through
+        their size.
+      </p>
+      <!--when server is up, update href-->
+      <a href="404.html">Checkout the visualizer here!</a>
+      <p>On one of the first iterations of this project, I intended to make a pseudo-
+        physics particle system in order to emulate waves, but that turned out south
+        after considering the ramifications (interactions with > 2 particles, size vs
+        field of influence, etc). But I did end up with something cool at least!
+      </p>
+      <img src="media\AudioVisualizer\particleSystem.png" style="margin:auto; width:90%;">
+      <img src="media\audioVisualizer\quadTree.png" style="margin:auto; width:90%;">
+      <img src="media\audioVisualizer\nebula.png" style="margin:auto; width:90%;"
+
+    </section>
+</body>
