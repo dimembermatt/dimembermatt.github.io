@@ -1,15 +1,19 @@
 //test sandbox for QuadTree
 'use strict';
-var modifier = 3 / 5;
-var cols =  100 * modifier;
-var rows =  50 * modifier;
-var particles = [];
-var boundary;
+let modifier = 3 / 5;
+let cols =  100 * modifier;
+let rows =  50 * modifier;
+let particles = [];
+let boundary;
+let width;
+let height;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
-  boundary = new Rectangle(window.innerWidth/2, window.innerHeight/2,
-    window.innerWidth/2, window.innerHeight/2);
+  width =  windowWidth * .9998;
+  height = windowHeight * .995;
+  createCanvas(width, height);
+  boundary = new Rectangle(width/2, height/2,
+    width/2, height/2);
   //populate 2d array particles with particle objects
 
   for (let i = 0; i < cols * rows; i++) {
@@ -61,4 +65,12 @@ function draw() {
       }
     }
   }
+}
+
+function windowResized() {
+  width =  windowWidth * .9998;
+  height = windowHeight * .995;
+  resizeCanvas(width, height);
+  boundary = new Rectangle(width/2, height/2,
+    width/2, height/2);
 }
