@@ -17,7 +17,7 @@ function setup() {
   //populate 2d array particles with particle objects
 
   for (let i = 0; i < cols * rows; i++) {
-    particles[i] = new Particle(random(width), random(height), random(5, 12), 5);
+    particles[i] = new Particle(random(width), random(height), random(1, 4), 5);
   }
 }
 
