@@ -28,7 +28,7 @@
       var pageBottom = pageTop + $(window).height()
       var tags = $("section")
 
-      for (var i = 2; i < tags.length; i++) {
+      for (var i = 2; i < tags.length - 4; i++) {
         var tag = tags[i]
 
         if ($(tag).position().top < pageBottom- window.innerHeight/3) {
@@ -218,7 +218,7 @@
 
     <!--contact me-->
     <!--TODO: aesthetic improvements-->
-    <section class="hover single appear-container">
+    <section class="hover single appear-container visible">
       <h3 class="">Contact Me</h3>
       <div class="flex-container">
         <section class="appear fade">
