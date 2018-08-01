@@ -19,6 +19,7 @@
   </script>
   <!--jQuery api host from Google-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--fade in objects-->
   <script>
     $(document).ready(function(){
       $(".delay").delay(1000).addClass("visible")
@@ -30,12 +31,10 @@
 
       for (var i = 2; i < tags.length - 4; i++) {
         var tag = tags[i]
-
         if ($(tag).position().top < pageBottom- window.innerHeight/3) {
           $(tag).addClass("visible")
         }else{
           $(tag).removeClass("visible")
-          /*$(tag).addClass("visible")*/
         }
       }
     });
@@ -43,12 +42,10 @@
 
   <!--starfield p5js-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>
-
-  <script type="text/javascript" src="Starfield.js"></script>
-  <script type="text/javascript" src="Star.js"></script>
+  <script type="text/javascript" src="starfield\Starfield.js"></script>
+  <script type="text/javascript" src="starfield\Star.js"></script>
 </head>
 
 <!--body-->
@@ -175,11 +172,31 @@
     <!--TODO: fill with content, hyperlink ref to internal webpages-->
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="0">&times;</a>
-      <p>test Projects</p>
+      <h3 style="margin-left:12%">><a href="projects.html">Projects</a><</h3>
+      <p>I always strive to learn more outside of class, for enjoyment and in
+        pursuit of my goals. My interests take me in all sorts of places, from
+        computer vision to emulating natural systems, and from audio to visualization.
+        Check out the projects I've worked on!
+      </p>
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="1">&times;</a>
-      <p>test Coursework</p>
+      <h3 style="margin-left:12%">><a href="404.html">Coursework</a><</h3>
+      <p>In addition to what I've done outside of class, I strive to do as well as
+        I can in my coursework. I've currently completed the relevant technical classes:
+      </p>
+      <ul style="list-style-type:none;max-width:60%;">
+        <li><a style="color:yellow;" href="http://www.ece.utexas.edu/undergraduate/courses/302">Intro to Electrical Engineering</a></li>
+        <li><a style="color:yellow;" href="http://www.ece.utexas.edu/undergraduate/courses/306">Intro to Computing</a></li>
+        <li><a style="color:yellow;" href="http://users.ece.utexas.edu/~valvano/Volume1/">Intro to Embedded Systems</a>
+      </ul>
+      <p style="float:left;max-width:60%;">You can click on those classes to see the course page. I've had a lot of
+        fun in these classes, especially for embedded systems; For my final project,
+        I designed a Pokemon Battle simulator on the TivaBoy with my partner Tatiana,
+        a console CADded by my roommate and soldered by myself and Augustus at Cirrus Labs.
+        You can see the older documentation of this project <a href="old.html#Coursework">here</a>.
+      </p>
+      <img src="media\EE319K_final_project\finished.jpg" style="position:relative;width:25%; top:-15%;right:5%;float:right;">
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="2">&times;</a>
@@ -192,8 +209,7 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="3">&times;</a>
-      <p>Visit the Old Site!</p>
-      <a href="old.html">Old Site</a>
+      <h3 style="margin-left:8%"><a href="old.html">>Visit the Old Site!<</a></h3>
     </div>
     <script>
       function accordion(ele) {

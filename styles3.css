@@ -200,7 +200,7 @@ section.visible {
 
 .panel {
   flex-basis: 100%;
-  height: 300px;
+  min-height: 300px;
 }
 
 .closebtn {

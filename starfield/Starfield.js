@@ -21,3 +21,7 @@ function draw() {
     stars[i].show();
   }
 }
+
+function windowResized() {
+  resizeCanvas(window.innerWidth * .988, window.innerHeight);
+}

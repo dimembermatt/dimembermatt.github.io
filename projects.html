@@ -56,6 +56,9 @@
     <section class="visible hover" style="flex-basis: 24%;">
       <button onclick="accordion(this)" id="1"><h3>TivaBoy Music Box</h3></button>
     </section>
+    <section class="visible hover" style="flex-basis: 24%;">
+      <button onclick="accordion(this)" id="2"><h3>Generative Drawings</h3></button>
+    </section>
     <div class="project none">
         <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
         <img src="media\AudioVisualizer\VisualizerInAction.PNG" style="margin:auto; width:90%;">
@@ -83,7 +86,7 @@
           their size.
         </p>
         <!--when server is up, update href-->
-        <a href="404.html">Checkout the visualizer here!</a>
+        <a href="Static_Particle_Visualizer_V1\Static_Particle_Visualizer.html">Checkout the visualizer here!</a>
         <p>On one of the first iterations of this project, I intended to make a pseudo-
           physics particle system in order to emulate waves, but that turned out south
           after considering the ramifications (interactions with > 2 particles, size vs
@@ -144,6 +147,55 @@
             <br><a href="https://github.com/dimembermatt/TivaBoy/blob/master/writeupImg2.jpg">Music Box Writeup Img 2</a></li>
           <li><a href="https://github.com/dimembermatt/OpenCV-Projects/blob/master/OMR_writeup.txt">Optical Music Recognition Writeup</a></li>
         </ul>
+    </div>
+    <div class="project none">
+        <h3 style="margin: 0;padding-top: 1em;">Generative Drawings</h3>
+        <img src="media\Generative_Drawings\orbitsDemo2.png" style="margin:auto; width:90%;">
+        <h4>Summer 2018</h4>
+        <hr style="margin:0 10%;">
+        <p>This was a quick, couple hour project I did at the end of July. I've
+          recently been intrigued by <a href="http://reas.com">generative art</a>
+          after the Web Audio Visualizer project, and wanted make my own little
+          programs that created designs based off of "natural" systems.
+        </p>
+        <p>In particular, I wanted to model gravitational attraction (being in EM physics class
+          for summer credit right now), and so built classes of objects that moved
+          based on vector acceleration (This was a problem particularly for the particle
+          system I tried to implement for the visualizer earlier).
+        </p>
+        <p>Here are three that I've made right now; you can right click on the
+          browser window and inspect them to see the source code. You can also
+          right click and save the screen as an image to use as a background or
+          screensaver.
+        </p>
+        <img src="media\Generative_Drawings\orbitsDemo.png" style="margin:auto; width:90%;">
+        <a href="Generative_Drawings\orbits.html">Orbits</a>
+        <p>This one in particular is a simulation of particles under gravity
+          (by each other, or by a stationary "black hole"). Thirty "planets"
+          are spawned over time, and they are attracted to each other to form
+          semi-regular orbits. If you uncomment in the Gravity_Bodies.js code
+          lines 45-48 (with the strokes and lines) in the inspector, you can see
+          scaled vectors of the velocity and acceleration.
+        </p>
+        <img src="media\Generative_Drawings\tracesDemo.png" style="margin:auto; width:90%;">
+        <a href="Generative_Drawings\traces.html">Traces</a>
+        <p>Traces is a modified version of Pointless, where the background has a
+          a reduced opacity, allowing trails of the particles to fade away slowly
+          as they fly across the window. In addition, the acceleration vectors
+          are reduced, minimizing curving of the objects.
+        </p>
+        <img src="media\Generative_Drawings\pointlessDemo.png" style="margin:auto; width:90%;">
+        <a href="Generative_Drawings\pointless.html">Pointless</a>
+        <p>Pointless (ha ha) is the first iteration I made, in which very fast
+          particles move around a static canvas. They have a larger acceleration
+          than Traces, allowing them to curve back on themselves if they bounce
+          off the walls.
+        </p>
+        <p>I'm currently planning to make a demo where the particles are
+          simulated inside an electric field. I think this could be a possible
+          visualizer idea where the flow of particles between a capacitor could
+          be represented by waveform data or frequency data.
+        </p>
     </div>
     <script>
       function accordion(ele) {
