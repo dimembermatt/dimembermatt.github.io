@@ -42,6 +42,66 @@
   </script>
   <style>
     p {font-size:  calc(8px + .75vw);}
+    a:link, a:visited {
+      color: darkblue;
+      text-decoration: none;
+    }
+    hr {
+    height: 1.5px;
+    color: rgb(128,128,128);
+    background: rgb(128,128,128);
+    font-size: 0;
+    border: 0;
+    }
+    /*slideshow*/
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      margin: auto;
+      vertical-align: middle;
+      height: 450px;
+      width: 90%;
+    }
+    .slideshow-container {
+      /* max-width: 1000px; */
+      position: relative;
+      margin: auto;
+    }
+    .numbertext {
+      color: black;
+      font-size: 16px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 5%;
+      right:10%;
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 30px 2px;
+      background-color: black;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: slategray;
+    }
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
   </style>
 </head>
 
@@ -163,7 +223,7 @@
           based on vector acceleration (This was a problem particularly for the particle
           system I tried to implement for the visualizer earlier).
         </p>
-        <p>Here are three that I've made right now; you can right click on the
+        <p>Here are four that I've made right now; you can right click on the
           browser window and inspect them to see the source code. You can also
           right click and save the screen as an image to use as a background or
           screensaver.
@@ -191,8 +251,98 @@
           than Traces, allowing them to curve back on themselves if they bounce
           off the walls.
         </p>
+        <!--flowfield slideshow-->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield1.png">
+            <div class="numbertext">1 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield2.png">
+            <div class="numbertext">2 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield3.png">
+            <div class="numbertext">3 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield4.png">
+            <div class="numbertext">4 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield5.png">
+            <div class="numbertext">5 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield6.png">
+            <div class="numbertext">6 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\heatmap.png">
+            <div class="numbertext">7 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\rainbowrain.png">
+            <div class="numbertext">8 / 9</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="media\Generative_Drawings\FlowFieldSlideshow\wormtunnels.png">
+            <div class="numbertext">9 / 9</div>
+          </div>
+        </div>
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <script>
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                 slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 5 seconds
+          }
+        </script>
+        <!--end slideshow-->
+        <a href="Generative_Drawings\flowfield.html">FlowField</a>
+        <p>This was a fun demo to make, using Perlin noise to direct particles across the canvas
+          to flow in various directions, like water currents. I followed around with the base
+          code with Dan Shiffman's Coding Train tutorial series, but split up around the
+          middle to build my own implementation. It was very interesting to see how
+          similar our end simulations ended up, although we had slightly different ideas
+          on how to implement movement and boundary checking.
+        </p>
+        <p>For this demo, there was really a lot of ways to create different representations
+          of the system, from purely displaying the flowfield as like a heatmap to showing
+          particle flows and their traces like a kind of organic tunnel system.
+          Make sure to check it out! I think it would be interesting to make a similar
+          simulation, but instead of regions of differing vector directions, have regions
+          of different "height" or "pressure", forcing particles to flow in one general
+          directions, such as "down a hill and into a basin."
+        </p>
+        <hr style="margin:0 10%;">
+        <h5>Future Plans</h5>
         <p>I'm currently planning to make a demo where the particles are
-          simulated inside an electric field. I think this could be a possible
+          simulated inside an electric field. This could be a possible
           visualizer idea where the flow of particles between a capacitor could
           be represented by waveform data or frequency data.
         </p>

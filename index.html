@@ -29,9 +29,9 @@
       var pageBottom = pageTop + $(window).height()
       var tags = $("section")
 
-      for (var i = 2; i < tags.length - 4; i++) {
+      for (var i = 2; i < tags.length; i++) {
         var tag = tags[i]
-        if ($(tag).position().top < pageBottom- window.innerHeight/3) {
+        if ($(tag).position().top < pageBottom- window.innerHeight/4) {
           $(tag).addClass("visible")
         }else{
           $(tag).removeClass("visible")
@@ -53,10 +53,10 @@
   <!--starfield-->
   <div id='starfield'></div>
   <!--bg pic-->
-  <img src="media\Slideshow\trees.jpg" style="position:absolute; width:90%; max-width: 1250px; margin:auto; top:8%; z-index: -1; border-radius:10px;">
+  <img src="media\Slideshow\trees.jpg" id="trees">
 
   <!--title-->
-  <div style="margin-top:calc(20px + .8em);vertical-align: middle;">
+  <div style="margin-top:0;vertical-align: middle;">
     <div style="background-color:rgb(255, 255, 255, .7); width:60%; margin:auto;padding-left:1em;padding-right:1em;">
       <h1 style="margin-bottom:0;">Think Forwards</h1>
       <h2 style="margin-top:0;margin-bottom:.5em;text-align:right;color:rgb(0, 128, 255);"><i>Break Barriers</i></h2>
@@ -68,7 +68,7 @@
         </div>
       </section>
       <!--student description-->
-      <section class="single visible" style="margin:5px 10%;">
+      <section class="single visible" style="margin:0 10%;">
         <h5>B.S. Electrical and Computer Engineering | May 2021 <br>University of Texas at Austin</h5>
       </section>
     </div>
@@ -172,7 +172,7 @@
     <!--TODO: fill with content, hyperlink ref to internal webpages-->
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="0">&times;</a>
-      <h3 style="margin-left:12%">><a href="projects.html">Projects</a><</h3>
+      <h3 style="margin-left:10%">> <a href="projects.html">Projects</a> <</h3>
       <p>I always strive to learn more outside of class, for enjoyment and in
         pursuit of my goals. My interests take me in all sorts of places, from
         computer vision to emulating natural systems, and from audio to visualization.
@@ -181,7 +181,7 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="1">&times;</a>
-      <h3 style="margin-left:12%">><a href="404.html">Coursework</a><</h3>
+      <h3 style="margin-left:10%">> <a href="404.html">Coursework</a> <</h3>
       <p>In addition to what I've done outside of class, I strive to do as well as
         I can in my coursework. I've currently completed the relevant technical classes:
       </p>
@@ -193,7 +193,7 @@
       <p style="float:left;max-width:60%;">You can click on those classes to see the course page. I've had a lot of
         fun in these classes, especially for embedded systems; For my final project,
         I designed a Pokemon Battle simulator on the TivaBoy with my partner Tatiana,
-        a console CADded by my roommate and soldered by myself and Augustus at Cirrus Labs.
+        a console CADded by my dormmate Jason, and soldered by myself and Augustus at Cirrus Labs.
         You can see the older documentation of this project <a href="old.html#Coursework">here</a>.
       </p>
       <img src="media\EE319K_final_project\finished.jpg" style="position:relative;width:25%; top:-15%;right:5%;float:right;">
@@ -209,7 +209,7 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="3">&times;</a>
-      <h3 style="margin-left:8%"><a href="old.html">>Visit the Old Site!<</a></h3>
+      <h3 style="margin-left:8%">> <a href="old.html">Visit the Old Site!</a> <</h3>
     </div>
     <script>
       function accordion(ele) {
@@ -234,24 +234,24 @@
 
     <!--contact me-->
     <!--TODO: aesthetic improvements-->
-    <section class="hover single appear-container visible">
+    <section class="hover single visible appear-container">
       <h3 class="">Contact Me</h3>
       <div class="flex-container">
-        <section class="appear fade">
+        <div class="appear fade">
           <a href="https://github.com/dimembermatt">
-            <img src="media/Icons/github.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+            <img src="media/Icons/github.png" style="width:50px;height:50px;border:0;">
           </a>
-        </section>
-        <section class="appear fade">
+        </div>
+        <div class="appear fade">
           <a href="mailto:matthewjkyu@gmail.com">
-            <img src="media/Icons/gmail.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+            <img src="media/Icons/gmail.png" style="width:50px;height:50px;border:0;">
           </a>
-        </section>
-        <section class="appear fade">
+        </div>
+        <div class="appear fade">
           <a href="https://www.linkedin.com/in/matthew-yu-126331144/">
-            <img src="media/Icons/linkedin.png" alt="HTML tutorial" style="width:50px;height:50px;border:0;">
+            <img src="media/Icons/linkedin.png" style="width:50px;height:50px;border:0;">
           </a>
-        </section>
+        </div>
       </div>
     </section>
   </div>

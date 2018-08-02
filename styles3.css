@@ -25,7 +25,7 @@ p {
 }
 
 a:link, a:visited {
-  color: blue;
+  color: lightblue;
   text-decoration: none;
 }
 a:hover {
@@ -63,6 +63,15 @@ button {
     color: white;
 }
 
+#trees {
+   position:absolute;
+   width:90%;
+   max-width: 1250px;
+   padding:0;
+   top:4%;
+   z-index: -1;
+   border-radius:10px;
+}
 #profile_pic {
   width: 9em;
   height: 9em;
@@ -80,9 +89,9 @@ button {
   z-index:-1;
 }
 
-@media screen and (min-width: 1200px) {
-  #intro1 {
-    margin-top: 25px;
+@media screen and (min-width: 1300px) {
+  #trees {
+    top: 0%;
   }
 }
 
