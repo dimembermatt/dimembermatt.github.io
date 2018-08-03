@@ -55,6 +55,8 @@ h4 {font-size: 1.333em;}
 
 h5 {font-size: .999em;}
 
+li {font-size: calc(8px + .75vw);}
+
 small, .font_small {font-size: 0.75em;}
 
 button {

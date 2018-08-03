@@ -60,7 +60,7 @@
     .mySlides img {
       margin: auto;
       vertical-align: middle;
-      height: 450px;
+      height: calc(200px + 20vw);
       width: 90%;
     }
     .slideshow-container {
@@ -213,7 +213,7 @@
         <img src="media\Generative_Drawings\orbitsDemo2.png" style="margin:auto; width:90%;">
         <h4>Summer 2018</h4>
         <hr style="margin:0 10%;">
-        <p>This was a quick, couple hour project I did at the end of July. I've
+        <p>This was a quick, couple day project I did at the end of July. I've
           recently been intrigued by <a href="http://reas.com">generative art</a>
           after the Web Audio Visualizer project, and wanted make my own little
           programs that created designs based off of "natural" systems.
@@ -223,122 +223,237 @@
           based on vector acceleration (This was a problem particularly for the particle
           system I tried to implement for the visualizer earlier).
         </p>
-        <p>Here are four that I've made right now; you can right click on the
-          browser window and inspect them to see the source code. You can also
-          right click and save the screen as an image to use as a background or
+        <p>Here are five that I've made right now; you can right click on the
+          titles to access the browser window/codepen and inspect them to see the source code.
+          You can also right click and save the screen as an image to use as a background or
           screensaver.
         </p>
-        <img src="media\Generative_Drawings\orbitsDemo.png" style="margin:auto; width:90%;">
-        <a href="Generative_Drawings\orbits.html">Orbits</a>
-        <p>This one in particular is a simulation of particles under gravity
-          (by each other, or by a stationary "black hole"). Thirty "planets"
-          are spawned over time, and they are attracted to each other to form
-          semi-regular orbits. If you uncomment in the Gravity_Bodies.js code
-          lines 45-48 (with the strokes and lines) in the inspector, you can see
-          scaled vectors of the velocity and acceleration.
-        </p>
-        <img src="media\Generative_Drawings\tracesDemo.png" style="margin:auto; width:90%;">
-        <a href="Generative_Drawings\traces.html">Traces</a>
-        <p>Traces is a modified version of Pointless, where the background has a
-          a reduced opacity, allowing trails of the particles to fade away slowly
-          as they fly across the window. In addition, the acceleration vectors
-          are reduced, minimizing curving of the objects.
-        </p>
-        <img src="media\Generative_Drawings\pointlessDemo.png" style="margin:auto; width:90%;">
-        <a href="Generative_Drawings\pointless.html">Pointless</a>
-        <p>Pointless (ha ha) is the first iteration I made, in which very fast
-          particles move around a static canvas. They have a larger acceleration
-          than Traces, allowing them to curve back on themselves if they bounce
-          off the walls.
-        </p>
-        <!--flowfield slideshow-->
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield1.png">
-            <div class="numbertext">1 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield2.png">
-            <div class="numbertext">2 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield3.png">
-            <div class="numbertext">3 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield4.png">
-            <div class="numbertext">4 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield5.png">
-            <div class="numbertext">5 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield6.png">
-            <div class="numbertext">6 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\heatmap.png">
-            <div class="numbertext">7 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\rainbowrain.png">
-            <div class="numbertext">8 / 9</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="media\Generative_Drawings\FlowFieldSlideshow\wormtunnels.png">
-            <div class="numbertext">9 / 9</div>
-          </div>
+        <div id="orbits">
+          <img src="media\Generative_Drawings\orbitsDemo.png" style="margin:auto; width:90%;">
+          <a href="Generative_Drawings\orbits.html">Orbits</a>
+          <p>This one in particular is a simulation of particles under gravity
+            (by each other, or by a stationary "black hole"). Thirty "planets"
+            are spawned over time, and they are attracted to each other to form
+            semi-regular orbits. If you uncomment in the Gravity_Bodies.js code
+            lines 45-48 (with the strokes and lines) in the inspector, you can see
+            scaled vectors of the velocity and acceleration.
+          </p>
         </div>
-        <div style="text-align:center">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+        <div id="traces">
+          <img src="media\Generative_Drawings\tracesDemo.png" style="margin:auto; width:90%;">
+          <a href="Generative_Drawings\traces.html">Traces</a>
+          <p>Traces is a modified version of Pointless, where the background has a
+            a reduced opacity, allowing trails of the particles to fade away slowly
+            as they fly across the window. In addition, the acceleration vectors
+            are reduced, minimizing curving of the objects.
+          </p>
         </div>
-        <script>
-          var slideIndex = 0;
-          showSlides();
-
-          function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                 slides[i].style.display = "none";
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 5000); // Change image every 5 seconds
-          }
-        </script>
-        <!--end slideshow-->
-        <a href="Generative_Drawings\flowfield.html">FlowField</a>
-        <p>This was a fun demo to make, using Perlin noise to direct particles across the canvas
-          to flow in various directions, like water currents. I followed around with the base
-          code with Dan Shiffman's Coding Train tutorial series, but split up around the
-          middle to build my own implementation. It was very interesting to see how
-          similar our end simulations ended up, although we had slightly different ideas
-          on how to implement movement and boundary checking.
-        </p>
-        <p>For this demo, there was really a lot of ways to create different representations
-          of the system, from purely displaying the flowfield as like a heatmap to showing
-          particle flows and their traces like a kind of organic tunnel system.
-          Make sure to check it out! I think it would be interesting to make a similar
-          simulation, but instead of regions of differing vector directions, have regions
-          of different "height" or "pressure", forcing particles to flow in one general
-          directions, such as "down a hill and into a basin."
-        </p>
+        <div id="pointless">
+          <img src="media\Generative_Drawings\pointlessDemo.PNG" style="margin:auto; width:90%;">
+          <a href="Generative_Drawings\pointless.html">Pointless</a>
+          <p>Pointless (ha ha) is the first iteration I made, in which very fast
+            particles move around a static canvas. They have a larger acceleration
+            than Traces, allowing them to curve back on themselves if they bounce
+            off the walls.
+          </p>
+        </div>
+        <div id="flowfield">
+          <!--flowfield slideshow-->
+          <div class="slideshow-container">
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield1.png">
+              <div class="numbertext">1 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield2.png">
+              <div class="numbertext">2 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield3.png">
+              <div class="numbertext">3 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield4.png">
+              <div class="numbertext">4 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield5.png">
+              <div class="numbertext">5 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\flowfield6.png">
+              <div class="numbertext">6 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\heatmap.png">
+              <div class="numbertext">7 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\rainbowrain.png">
+              <div class="numbertext">8 / 9</div>
+            </div>
+            <div class="mySlides fade flow">
+              <img src="media\Generative_Drawings\FlowFieldSlideshow\wormtunnels.png">
+              <div class="numbertext">9 / 9</div>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+            <span class="dot flow-d"></span>
+          </div>
+          <script>
+            var slideIndex1 = 0;
+            showSlides1();
+            function showSlides1() {
+                var i;
+                var slides = document.getElementsByClassName("flow");
+                var dots = document.getElementsByClassName("flow-d");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+                }
+                slideIndex1++;
+                if (slideIndex1 > slides.length) {slideIndex1 = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex1-1].style.display = "block";
+                dots[slideIndex1-1].className += " active";
+                setTimeout(showSlides1, 5000); // Change image every 5 seconds
+            }
+          </script>
+          <!--end slideshow-->
+          <a href="Generative_Drawings\flowfield.html">FlowField</a>
+          <p>This was a fun demo to make, using Perlin noise to direct particles across the canvas
+            to flow in various directions, like water currents. I followed around with the base
+            code with Dan Shiffman's Coding Train tutorial series, but split up around the
+            middle to build my own implementation. It was very interesting to see how
+            similar our end simulations ended up, although we had slightly different ideas
+            on how to implement movement and boundary checking.
+          </p>
+          <p>For this demo, there was really a lot of ways to create different representations
+            of the system, from purely displaying the flowfield as like a heatmap to showing
+            particle flows and their traces like a kind of organic tunnel system.
+            Make sure to check it out! I think it would be interesting to make a similar
+            simulation, but instead of regions of differing vector directions, have regions
+            of different "height" or "pressure", forcing particles to flow in one general
+            directions, such as "down a hill and into a basin."
+          </p>
+        </div>
+        <div id="noisy">
+          <div class="slideshow-container">
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\spaceMountain.png">
+              <div class="numbertext">1 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\moon.png">
+              <div class="numbertext">2 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\coastline.png">
+              <div class="numbertext">3 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\nebula2.png">
+              <div class="numbertext">4 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\nebula3.png">
+              <div class="numbertext">5 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\wunderscape1.png">
+              <div class="numbertext">6 / 7</div>
+            </div>
+            <div class="mySlides fade noisy">
+              <img src="media\Generative_Drawings\NoisySlideshow\wunderscape2.png">
+              <div class="numbertext">7 / 7</div>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+            <span class="dot noisy-d"></span>
+          </div>
+          <script>
+            var slideIndex2 = 0;
+            showSlides2();
+            function showSlides2() {
+                var i;
+                var slides = document.getElementsByClassName("noisy");
+                var dots = document.getElementsByClassName("noisy-d");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+                }
+                slideIndex2++;
+                if (slideIndex2 > slides.length) {slideIndex2 = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex2-1].style.display = "block";
+                dots[slideIndex2-1].className += " active";
+                setTimeout(showSlides2, 5000); // Change image every 5 seconds
+            }
+          </script>
+          <a href="https://codepen.io/dimembermatt/pen/GBGvJR">Noisy</a>
+          <p>This project was done for the purpose of learning how to access and modify
+            the pixels array that P5.js uses to represent its canvas display. I decided
+            to take what I learned about Perlin Noise from the FlowField demo and run
+            images through a filter.
+          </p>
+          <h5>I used the following algorithm:<h5>
+          <ol>
+            <li>Create a threshold by first passing all pixels through a loop
+              and grabbing the average of their RGB values.</li>
+            <li>Use that first threshold and run through the pixel array again,
+              but for each pixel's R,G,B value, check if they exceed the threshold.
+              If they do, apply a modifier created by grabbing noise values at the
+              start of each block of pixels (of arbitrarily chosen size).</li>
+            <li>After passing through the image, update the image with the new RGB
+              values, and continue iterating until paused.</li>
+          </ol>
+          <p>
+            Step two previously had the noise recalculated for every pixel, but that
+            posed a problem of being computationally intensive (to the point of crashing
+            Chrome). This was solved by reapplying the noise for every set of pixels,
+            whose size strongly determines the resulting design.
+          </p>
+          <p>For example, there is a comment in the codepen that suggests the value 19
+            in the line
+          </p>
+          <h5 style="margin:0 10%;"><b>[68]</b> ...if( i/(d*width/(width/19)) == blockIdx ) {...}<h5>
+          <p>can be adjusted to 25 or 100. If the value is 100, the resulting image is like the top left image in
+            the first slide of the slideshow, with horizontal bars of "static" across similar
+            regions. If the value is 19 or 25, the tendency is to have a more blob or fine grain texture
+            in the static. In fact, this is true for all values indivisible cleanly by 4.
+            Values such as 24, or 80, produce visually similar images to 100. It will take
+            me a little bit to ponder why this is the case, but it possibly might have to do with
+            the fact that the index, i, increases by 4 for every iteration since each pixel uses
+            4 indices for RGBA values.
+          </p>
+          <p>Another unexpected result of this demo is that drawings, like web art, do not
+            produce as fragmented pictures. This is likely because pictures hold a lot more contrast
+            across the image where web art has more even distributions of flat colors.
+          </p>
+          <p>Application wise, this would be really cool as a noise filter for images.
+            Looking through GIMP's noise filters, there isn't anything like this that
+            applies noise in correlation with the current picture color. However, it
+            should be acknowledged that there is a challenge in picking good values
+            for number of iterations, since at some point the image is blurred out beyond
+            recognition going through so many passes.
+          </p>
+        </div>
         <hr style="margin:0 10%;">
         <h5>Future Plans</h5>
         <p>I'm currently planning to make a demo where the particles are
