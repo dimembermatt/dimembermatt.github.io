@@ -22,19 +22,19 @@
   <!--fade in objects-->
   <script>
     $(document).ready(function(){
-      $(".delay").delay(1000).addClass("visible")
+      $(".delay").delay(1000).addClass("visible");
     });
     $(document).on("scroll", function() {
-      var pageTop = $(document).scrollTop()
-      var pageBottom = pageTop + $(window).height()
-      var tags = $("section")
+      var pageTop = $(document).scrollTop();
+      var pageBottom = pageTop + $(window).height();
+      var tags = $("section");
 
       for (var i = 2; i < tags.length; i++) {
-        var tag = tags[i]
+        var tag = tags[i];
         if ($(tag).position().top < pageBottom- window.innerHeight/4) {
-          $(tag).addClass("visible")
+          $(tag).addClass("visible");
         }else{
-          $(tag).removeClass("visible")
+          $(tag).removeClass("visible");
         }
       }
     });
@@ -171,8 +171,8 @@
     <!--accordion panels-->
     <!--TODO: fill with content, hyperlink ref to internal webpages-->
     <div class="panel none">
+      <h3>> <a href="projects.html">Projects</a> <</h3>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="0">&times;</a>
-      <h3 style="margin-left:10%">> <a href="projects.html">Projects</a> <</h3>
       <p>I always strive to learn more outside of class, for enjoyment and in
         pursuit of my goals. My interests take me in all sorts of places, from
         computer vision to emulating natural systems, and from audio to visualization.
@@ -181,7 +181,7 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="1">&times;</a>
-      <h3 style="margin-left:10%">> <a href="404.html">Coursework</a> <</h3>
+      <h3>> <a href="404.html">Coursework</a> <</h3>
       <p>In addition to what I've done outside of class, I strive to do as well as
         I can in my coursework. I've currently completed the relevant technical classes:
       </p>
@@ -190,7 +190,7 @@
         <li><a style="color:yellow;" href="http://www.ece.utexas.edu/undergraduate/courses/306">Intro to Computing</a></li>
         <li><a style="color:yellow;" href="http://users.ece.utexas.edu/~valvano/Volume1/">Intro to Embedded Systems</a>
       </ul>
-      <p style="float:left;max-width:60%;">You can click on those classes to see the course page. I've had a lot of
+      <p style="float:left;max-width:55%;">You can click on those classes to see the course page. I've had a lot of
         fun in these classes, especially for embedded systems; For my final project,
         I designed a Pokemon Battle simulator on the TivaBoy with my partner Tatiana,
         a console CADded by my dormmate Jason, and soldered by myself and Augustus at Cirrus Labs.
@@ -209,7 +209,7 @@
     </div>
     <div class="panel none">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)" id="3">&times;</a>
-      <h3 style="margin-left:8%">> <a href="old.html">Visit the Old Site!</a> <</h3>
+      <h3>> <a href="old.html">Visit the Old Site!</a> <</h3>
     </div>
     <script>
       function accordion(ele) {

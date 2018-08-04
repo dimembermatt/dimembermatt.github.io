@@ -55,7 +55,7 @@ h4 {font-size: 1.333em;}
 
 h5 {font-size: .999em;}
 
-li {font-size: calc(8px + .75vw);}
+li {font-size: .75em;}
 
 small, .font_small {font-size: 0.75em;}
 
@@ -210,16 +210,18 @@ section.visible {
 }
 
 .panel {
+  position:relative;
   flex-basis: 100%;
   min-height: 300px;
 }
 
 .closebtn {
-  float: right;
+  position:absolute;
+  right: 0;
+  top: 0;
   padding: 8px 32px 8px 32px;
   text-decoration: none;
   font-size: 40px;
   color: #818181;
-  display: inline;
   transition: 0.3s;
 }
