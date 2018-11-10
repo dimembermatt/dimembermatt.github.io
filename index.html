@@ -31,7 +31,7 @@
 
       for (var i = 2; i < tags.length -1; i++) {
         var tag = tags[i];
-        if ($(tag).position().top < pageBottom-window.innerHeight/3) {
+        if ($(tag).position().top < pageBottom-window.innerHeight/3+100) {
           $(tag).addClass("visible");
         }else{
           $(tag).removeClass("visible");
