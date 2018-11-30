@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- LANDING PAGE-->
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--header-->
+<head>
+  <title>Coursework</title>
+  <link rel="stylesheet" href="styles3.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120550704-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120550704-1');
+  </script>
+  <!--jQuery api host from Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".delay").delay(1000).addClass("visible")
+    });
+    $(document).on("scroll", function() {
+      var pageTop = $(document).scrollTop()
+      var pageBottom = pageTop + $(window).height()
+      var tags = $("section")
+
+      for (var i = 2; i < tags.length; i++) {
+        var tag = tags[i]
+
+        if ($(tag).position().top < pageBottom- window.innerHeight/3) {
+          $(tag).addClass("visible")
+        }else{
+          $(tag).removeClass("visible")
+          /*$(tag).addClass("visible")*/
+        }
+      }
+    });
+  </script>
+  <style>
+    p {font-size:  calc(8px + .75vw);}
+    a:link, a:visited {
+        color: darkblue;
+        text-decoration: none;
+    }
+    hr {
+        height: 1.5px;
+        color: rgb(128,128,128);
+        background: rgb(128,128,128);
+        font-size: 0;
+        border: 0;
+    }
+    button {
+        min-height: 100px;
+    }
+    .closebtn {
+        position:fixed;
+        right: 6%;
+        top:8%;
+        /* height:15px; */
+        padding: 5px 20px;
+        text-decoration: none;
+        font-size: 40px;
+        color: #818181;
+        background-color: rgba(13, 27, 63, .8);
+        border-radius: 10%;
+        /* display: inline; */
+    }
+    .closebtn:hover{color: red;}
+    /*slideshow*/
+    .mySlides {display: none;}
+    .mySlides img {
+        margin: auto;
+        vertical-align: middle;
+        height: calc(200px + 20vw);
+        width: 90%;
+    }
+    .slideshow-container {
+        /* max-width: 1000px; */
+        position: relative;
+        margin: auto;
+    }
+    .numbertext {
+        color: black;
+        font-size: 16px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 5%;
+        right:10%;
+    }
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 30px 2px;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active {background-color: slategray;}
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+  </style>
+</head>
+
+<body id="main" style="background-color:rgb(126, 186, 206);">
+  <!--title-->
+  <h1>Coursework</h1>
+  <a href="javascript:void(0)" style="color:white" class="closebtn none" onclick="closeNav()">&times;</a>
+  <div class="flex-container">
+    <!--Fall 2017-->
+    <!--accordion titles-->
+    <h2 style="flex-basis:90%">Fall 2017</h2>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="0"><h4>EE302 - Intro to Electrical Engineering</h4></button>
+    </section>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="1"><h4>EE306 - Into to Computing</h4></button>
+    </section>
+
+    <!--summaries-->
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">Intro to Electrical Engineering</h3>
+        <img src="media\EE302_final_project\side_robot.jpg" style="margin:auto; width:40%;">
+        <p>
+            One of the first two "intro" courses for ECE at UT, EE302 is undoubtedly
+            a cold, clinical wakeup call to the intensity and difficulty of the program.
+            The
+        </p>
+    </div>
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">Intro to Computing</h3>
+        <p>Blah
+        </p>
+    </div>
+
+
+    <!--Spring 2018-->
+    <!--accordion titles-->
+    <h2 style="flex-basis:90%">Spring 2018</h2>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="2"><h4>EE319K - Intro to Embedded Systems</h4></button>
+    </section>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="0"><h4>UGS302 - How Things Work</h4></button>
+    </section>
+
+    <!--summaries-->
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
+        <img src="media\AudioVisualizer\VisualizerInAction.PNG" style="margin:auto; width:90%;">
+        <h4>Summer 2018</h4>
+        <hr style="margin:0 10%;">
+        <p>This project was built in collaboration with Ryan Menghani and Gauraang Dhamankar
+          at UT. We decided to create a web music visualizer, using MDN's
+          Web Audio API to grab MP3 data and the P5 API to create easy graphics.
+        </p>
+    </div>
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">TivaBoy Music Player</h3>
+        <video style="display:block; margin:auto; height:400px;width:200px;" controls>
+          <source src="media\TivaBoy_Music_Player\JubilifeDemo.mp4" type="video/mp4">
+        </video>
+        <h4>Summer 2018</h4>
+        <hr style="margin:0 10%;">
+        <p>While the Web Audio Visualizer was a big part of this summer, my other main
+          project is enhancing the TivaBoy (c) Music Player that I made during the last
+          couple weeks of my freshman year at UT. After making a small video game for our
+          final project (<a href="https://dimembermatt.github.io/old.html#Coursework">Pokemon!</a>),
+          I decided to create a small audio player for simple songs before finals because
+          I <i>really</i> wanted to get audio working correctly on the TivaBoy.
+        </p>
+    </div>
+
+
+    <!--Fall 2018-->
+    <!--accordion titles-->
+    <h2 style="flex-basis:90%">Fall 2018</h2>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="1"><h4>EE312 - Software Design and Implementation</h4></button>
+    </section>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="1"><h4>EE411 - Circuit Theory</h4></button>
+    </section>
+    <section class="visible hover" style="flex-basis: 45%;">
+      <button onclick="accordion(this)" id="2"><h4>EE309S - Development of a Solar Powered Vehicle</h4></button>
+    </section>
+
+    <!--summaries-->
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
+        <img src="media\AudioVisualizer\VisualizerInAction.PNG" style="margin:auto; width:90%;">
+        <h4>Summer 2018</h4>
+        <hr style="margin:0 10%;">
+        <p>This project was built in collaboration with Ryan Menghani and Gauraang Dhamankar
+          at UT. We decided to create a web music visualizer, using MDN's
+          Web Audio API to grab MP3 data and the P5 API to create easy graphics.
+        </p>
+    </div>
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">TivaBoy Music Player</h3>
+        <video style="display:block; margin:auto; height:400px;width:200px;" controls>
+          <source src="media\TivaBoy_Music_Player\JubilifeDemo.mp4" type="video/mp4">
+        </video>
+        <h4>Summer 2018</h4>
+        <hr style="margin:0 10%;">
+        <p>While the Web Audio Visualizer was a big part of this summer, my other main
+          project is enhancing the TivaBoy (c) Music Player that I made during the last
+          couple weeks of my freshman year at UT. After making a small video game for our
+          final project (<a href="https://dimembermatt.github.io/old.html#Coursework">Pokemon!</a>),
+          I decided to create a small audio player for simple songs before finals because
+          I <i>really</i> wanted to get audio working correctly on the TivaBoy.
+        </p>
+    </div>
+
+
+    <!--other coursework-->
+    <h3 style="flex-basis:90%">Other coursework I've taken:</h3>
+    <ul>
+        <li>M427J - Differential Equations</li>
+        <li>M340L - Matrices and Matrix Calculations</li>
+        <li>ITD101 - Intro to Design</li>
+    </ul>
+
+    <!--expander-->
+    <script>
+    function accordion(ele) {
+        var id = ele.id;
+        var panels = $(".course");
+        for (var i = 0; i < panels.length; i++){
+            if (i != id){
+                $(panels[i]).addClass("none");
+            }else{
+                $(panels[i]).removeClass("none");
+            }
+        }
+        var closebtn = $(".closebtn");
+        $(closebtn).removeClass("none");
+    }
+    function closeNav() {
+        var panels = $(".course");
+        for (var i = 0; i < panels.length; i++){
+            $(panels[i]).addClass("none");
+        }
+        var closebtn = $(".closebtn");
+        $(closebtn).addClass("none");
+    }
+    </script>
+</body>
