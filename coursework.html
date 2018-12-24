@@ -126,26 +126,115 @@
     <!--Fall 2017-->
     <!--accordion titles-->
     <h2 style="flex-basis:90%">Fall 2017</h2>
-    <section class="visible hover" style="flex-basis: 45%;">
+    <section class="visible hover" style="flex-basis:45%;">
       <button onclick="accordion(this)" id="0"><h4>EE302 - Intro to Electrical Engineering</h4></button>
     </section>
-    <section class="visible hover" style="flex-basis: 45%;">
-      <button onclick="accordion(this)" id="1"><h4>EE306 - Into to Computing</h4></button>
+    <section class="visible hover" style="flex-basis:45%;">
+      <button onclick="accordion(this)" id="1"><h4>EE306 - Intro to Computing</h4></button>
     </section>
 
     <!--summaries-->
     <div class="course none">
-        <h3 style="margin: 0;padding-top: 1em;">Intro to Electrical Engineering</h3>
-        <img src="media\EE302_final_project\side_robot.jpg" style="margin:auto; width:40%;">
+        <h3 style="margin:0;padding-top:1em;">Intro to Electrical Engineering</h3>
         <p>
-            One of the first two "intro" courses for ECE at UT, EE302 is undoubtedly
-            a cold, clinical wakeup call to the intensity and difficulty of the program.
-            The
+            This class constitutes the foundational circuit analysis techniques
+            and knowledge required for future courses such as EE411, Circuit Theory
+            and upper division courses in Electrical Engineering. Among the topics
+            learned in this class are:
+            <ul>
+                <li>Operational Amplifiers</li>
+                <li>Mesh/Node Analysis</li>
+                <li>Thevenin and Norton Equivalents</li>
+                <li>Power Transfer</li>
+            </ul>
+        </p>
+        <img src="media\EE302_final_project\side_robot.jpg" style="display:block;margin:auto; width:40%;">
+        <h4>
+            Final Lab: Build an autonomous car that can navigate an obstacle course.
+        </h4>
+        <p>
+            While this lab was a culmination of all the technical skills we've learned
+            in the course, such as soldering, interfacing, and building programs
+            with Labview, ultimately it was a greater lesson in what <i>not</i>
+            to do when designing and implementing a project such as an autonomous car.
+        </p>
+        <h5><center><u>Choose your hardware appropiately.</u></center></h5>
+        <p>
+            As is made quite evident in the picture above, our car was a splendid
+            mishmash of trailing wires and a semi-stable cardboard frame sagging
+            under the weight of not one, but <i>two</i> myDAQs plus a breadboard.
+        </p>
+        <p>
+            This made our car unwieldy, liable to fall over backwards at a bad touch,
+            and very hard to debug and construct. A friendly reminder that myDAQ
+            stands for Data AcQuisition Device, not a microcontroller.
+        </p>
+        <p>
+            An alternative solution to the problem was to use an Arduino microcontroller,
+            unfortunately something we were made aware of almost the night before
+            the lab was to be checked out. That would've massively simplified the work
+            that would have to be done programming the control loops, as well as reduce
+            the overall size of the car.
+        </p>
+        <p>
+            Another issue (and arguably the one that killed the car) was the sensors
+            we were given -a set of photoresistors for the line sensing. If held up
+            to the black line, with and without direct illumination, the output
+            voltage would decrease over time without fail. This means that our efforts
+            to threshold the line through software and hardware ended up with little fruit.
+            If I were to go back in time, I would have at the very least revised
+            the development timeline to have first tested the sensors and changed
+            them out before integrating them and then testing them.
+        </p>
+        <p>
+            This case is a pretty obvious application of the lesson; although it
+            has popped up outside of class, particularly in my experiences with
+            IEEE RAS Region V's 2017 robot and constructing testing setups for
+            UTSVT's solar array. The proper research and use of equipment, even
+            as trivial as the connectors between solar cells, play a pivotal role
+            in the development of any project.
         </p>
     </div>
     <div class="course none">
         <h3 style="margin: 0;padding-top: 1em;">Intro to Computing</h3>
-        <p>Blah
+        <p>
+            Intro to Computing is a bottom-up approach of understanding the
+            complexity of computers, from low (low) level bitgates to the LC3-A
+            instruction set architecture and assembly. This is the foundational
+            class to EE319K, Intro to Embedded Systems, EE460N, Computer Architecture,
+            and many more classes.
+        </p>
+        <img src="media\EE306\Connect_four.PNG" style="display:block;margin:auto; width:40%;">
+        <p>
+            The final lab for this class consists of creating a fully operational
+            game in LC3 Assembly, in this case Connect Four. Students were expected
+            to manage I/O, create subroutines, and maintain memory of the state
+            of the game until an end condition is reached.
+        </p>
+        <p>
+            A particularly interesting problem I encountered during this lab was
+            that my program became large enough that PC-relative assembler instructions
+            were unable to retrieve data from where they were stored. My solution
+            for this was to create a subroutine that imported the "global variables"
+            into local variables closer to the methods in order to provide a read-only
+            copy. Since it was only read only, this subroutine is good only for
+            functions such as checking for four in a row.
+        </p>
+        <hr>
+        <p>
+            Another program that I made after the last lab ended was an LC3 program
+            based off of the game of war. I was interested in learning about
+            pseudorandom number generators, and wanted to create my own. I initially
+            used a friend's prng he made for his LC3 implementation of Conway's
+            Game of Life, and used that to make a primitive Game of War card game
+            that unfortunately lacked a deck feature, so it only gave the player
+            and the CPU a pseudorandom card based on an input seed.
+        </p>
+        <p>
+            However, I then created my own PRNG using the Linear Congruential Method
+            referenced from Donald Knuth, the author of The Art of Computer Programming.
+            In the future EE312 Intro to Software Design class, I and my partner
+            will implement Go Fish in C++, that works with a pregenerated deck.
         </p>
     </div>
 
@@ -157,33 +246,124 @@
       <button onclick="accordion(this)" id="2"><h4>EE319K - Intro to Embedded Systems</h4></button>
     </section>
     <section class="visible hover" style="flex-basis: 45%;">
-      <button onclick="accordion(this)" id="0"><h4>UGS302 - How Things Work</h4></button>
+      <button onclick="accordion(this)" id="3"><h4>UGS302 - How Things Work</h4></button>
     </section>
 
     <!--summaries-->
     <div class="course none">
-        <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
-        <img src="media\AudioVisualizer\VisualizerInAction.PNG" style="margin:auto; width:90%;">
-        <h4>Summer 2018</h4>
-        <hr style="margin:0 10%;">
-        <p>This project was built in collaboration with Ryan Menghani and Gauraang Dhamankar
-          at UT. We decided to create a web music visualizer, using MDN's
-          Web Audio API to grab MP3 data and the P5 API to create easy graphics.
+        <h3 style="margin: 0;padding-top: 1em;">Intro to Embedded Systems</h3>
+        <img src="media\EE319K_final_project\finished.jpg" style="display:block; margin:auto; width:30%;">
+        <p>
+            Easily my favorite class of the semester, Intro to Embedded Systems
+            explores the interaction between computers and the outside world.
+            Among the topics covered during this class are:
+            <ul>
+                <li>interfacing</li>
+                <li>analog to digital converters and vice versa</li>
+                <li>communication with SPI</li>
+                <li>interrupts</li>
+            </ul>
         </p>
-    </div>
-    <div class="course none">
-        <h3 style="margin: 0;padding-top: 1em;">TivaBoy Music Player</h3>
+        <p>
+            In this class I worked with the Tiva TM4C microcontroller, using at
+            first ARM Thumb2 Assembly to create things like a finite state machine
+            traffic light and then later on, C to make a keyboard with switches.
+            Our final project involved creating a whole game from scratch, and I
+            created and soldered the interfacing for the TivaBoy.
+        </p>
+        <img src="media\EE319K_final_project\circuit schematic v1.png" style="display:block; margin:auto; width:60%;">
+        <p>
+            One of the really taxing parts of this project was implementing the game
+            itself, a stripped down version of a Pokemon battle. I spent a <i>lot</i>
+            of time getting the fundamental TivaBoy working, drivers and all, and
+            allocated too little time (context: this was my entire month of May)
+            to actually program the game. In retrospect, it would have been less
+            stressful to implement a mechanically simpler game, like Pong, and add
+            an interesting twist on it. In addition, it would probably be better, too.
+        </p>
+        <p>
+            However, I'm pretty glad overall about this project, since it allowed me
+            to encounter a lot of the problems that a developer would face when
+            working to integrate their application with the base hardware, such as
+            creating and manipulating graphics and sound. I did come up with a couple
+            cool solutions, such as a virtual buffer and repurposing the previous
+            piano lab to output music with the pitiful memory requirements we had.
+        </p>
+        <img src="media\EE319K_final_project\complete_tivaboy.jpg" style="display:block; margin:auto; width:50%;">
+        <p>
+            Credits to my lab partner, Tatiana Flores, who helped me throughout our
+            labs to allow me to learn so much, my roommate, Jason Nguyen, for CADding
+            and 3d printing the chassis, and Augustus, who lended his solder skills
+            to beautifully finish the first TivaBoy.
+        </p>
+        <hr>
+        <p>
+            The TivaBoy is still an ongoing project, and I've designed it so that
+            its modular and any game I can think of can probably be programmed on
+            there. I'm currently redesigning a <a href="projects.html">plan</a>
+            in which I can play more advanced music (see <i>chords</i>) with the
+            DAC using a custom file format that is generated with OpenCV using
+            optical music recognition.
+        </p>
         <video style="display:block; margin:auto; height:400px;width:200px;" controls>
           <source src="media\TivaBoy_Music_Player\JubilifeDemo.mp4" type="video/mp4">
         </video>
-        <h4>Summer 2018</h4>
-        <hr style="margin:0 10%;">
-        <p>While the Web Audio Visualizer was a big part of this summer, my other main
-          project is enhancing the TivaBoy (c) Music Player that I made during the last
-          couple weeks of my freshman year at UT. After making a small video game for our
-          final project (<a href="https://dimembermatt.github.io/old.html#Coursework">Pokemon!</a>),
-          I decided to create a small audio player for simple songs before finals because
-          I <i>really</i> wanted to get audio working correctly on the TivaBoy.
+
+    </div>
+    <div class="course none">
+        <h3 style="margin: 0;padding-top: 1em;">How Things Work</h3>
+        <p>
+            How Thinks Work is a class that explores the design of processes and
+            objects, from traffic simulations to cars. This class invites a lot
+            of outside professors and industry professionals to come and talk about
+            what they do, and how does what they do work. Among the many interesting
+            talks held in the class is one about the Innovation Station, a 3D printing
+            vending machine created by UT mechanical engineering students in 2014.
+        </p>
+        <p>
+            This class focuses in on the design process, from ideation to customer
+            feedback, and from prototyping to refinement. Each discussion session
+            decides on a singular type of product to make, and groups go out and
+            make their own prototypes of that that product. For our group, we decided
+            to make an automated pet feeder to tackle the issue of leaving a pet
+            at home alone for a vacation, or reducing the workload of what was
+            previously a tedious chore.
+        </p>
+        <img src="media\UGS303_project\Assembly.jpg"
+            style="display:block; margin:auto; width:40%;">
+        <p>
+            In this project, I led the development of the circuitry and interfacing
+            of sensors to the pet feeder, as well as the arduino programing and
+            testing to integrate all the sensors together. The electrical components
+            consisted of three potentiometers that adjusted the time of feeding
+            and stepper motor that adjusted the opening to allow food to come out
+            of the nozzle of the pet feeder.
+        </p>
+        <img src="media\UGS303_project\Control_box.jpg" style="display:block; margin:auto; width:40%;">
+        <p>
+            Altogether, it was a pretty simple project programming wise, but one
+            of the issues we had was putting all of the wires and the microcontroller
+            into the control box. The end solution was to carefully align the
+            wiring so that there was minimal width used along the breadboard to
+            properly place it between the Arduino and the knob potentiometers.
+        </p>
+        <p>
+            Another issue design wise that we stumbled upon was the slider
+            that allowed food in and out. There is a little groove that keeps the
+            slider in place, but that can jam up with pet food. A solution to this
+            would be to remove the lower groove and keep the top groove to keep the
+            slider, or even better, modify the slider be raised vertically instead
+            of horizontally.
+        </p>
+        <video style="display:block; margin:auto; height:16%;width:30%;" controls>
+          <source src="media\UGS303_project\Final_product.mp4" type="video/mp4">
+        </video>
+        <p>
+            Overall, this class taught me a lot about design requirements and the
+            design process, especially the need to iteratively design in order
+            to probe out problems in earlier prototypes. I think this skill is
+            definitely important when working for a company that creates a physical
+            (or even virtual) product in order to create a polished idea.
         </p>
     </div>
 
@@ -192,13 +372,13 @@
     <!--accordion titles-->
     <h2 style="flex-basis:90%">Fall 2018</h2>
     <section class="visible hover" style="flex-basis: 45%;">
-      <button onclick="accordion(this)" id="1"><h4>EE312 - Software Design and Implementation</h4></button>
+      <button onclick="accordion(this)" id="4"><h4>EE312 - Software Design and Implementation</h4></button>
     </section>
     <section class="visible hover" style="flex-basis: 45%;">
-      <button onclick="accordion(this)" id="1"><h4>EE411 - Circuit Theory</h4></button>
+      <button onclick="accordion(this)" id="5"><h4>EE411 - Circuit Theory</h4></button>
     </section>
     <section class="visible hover" style="flex-basis: 45%;">
-      <button onclick="accordion(this)" id="2"><h4>EE309S - Development of a Solar Powered Vehicle</h4></button>
+      <button onclick="accordion(this)" id="6"><h4>EE309S - Development of a Solar Powered Vehicle</h4></button>
     </section>
 
     <!--summaries-->
