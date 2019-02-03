@@ -131,6 +131,9 @@
     <section class="visible hover" style="flex-basis: 24%;">
       <button onclick="accordion(this)" id="2"><h3>Generative Drawings</h3></button>
     </section>
+    <section class="visible hover" style="flex-basis: 24%;">
+      <button onclick="accordion(this)" id="3"><h3>Markov Chain Image Generation</h3></button>
+    </section>
     <div class="project none">
         <h3 style="margin: 0;padding-top: 1em;">Audio Web Visualizer</h3>
         <img src="media\AudioVisualizer\VisualizerInAction.PNG" style="margin:auto; width:90%;">
@@ -157,7 +160,6 @@
           unique shimmering effect where particles warp in and out of existence through
           their size.
         </p>
-        <!--when server is up, update href-->
         <a href="https://dimembermatt.github.io/Web-Audio-Visualizer/">Checkout the visualizer here!</a>
         <p>On one of the first iterations of this project, I intended to make a pseudo-
           physics particle system in order to emulate waves, but that turned out south
@@ -482,6 +484,73 @@
           <a href="https://dimembermatt.github.io/Generative_Art/">Generative Art Gallery</a>
           and the <a href="https://github.com/dimembermatt/Generative_Art">Github Repo</a>.
         </p>
+    </div>
+    <div class="project none">
+        <h3 style="margin: 0;padding-top: 1em;">Markov Chain Image Generation</h3>
+        <img src="media\Markov_Chains\image_0007.jpg" style="margin-left:auto; width:45%;">
+        <img src="media\Markov_Chains\Sunflower007_10bins.png" style="margin-right:auto; width:45%;">
+        <h4>January 2019</h4>
+        <hr style="margin:0 10%;">
+        <p>The second half of my winter break was spent working on this project,
+            a picture generator based on Markov Chains. My initial idea for this
+            project came from when I was reading this
+            <a href="https://magenta.as/using-machine-learning-to-make-art-84df7d3bb911">
+            cool article</a> where the author uses Markov chains to build sentences
+            and extrapolate that process to art.
+        </p>
+        <p>The concept behind Markov Chain data generation is pretty simple; a datapoint
+            (in my case, a point in the color space) is associated to other datapoints
+            based on the statistical possibility of their occurrence in sequential
+            order.
+        </p>
+        <p>For example, if the word "hello" is followed by the word "world" in a
+            sentence, then when the word "hello" is typed again, there is a
+            non-insignificant chance that "world" will be the next word. In the
+            case that the dataset that has every "hello" instance followed by a
+            "world" instance, that chance is 100%.
+        </p>
+        <img src="media\Markov_Chains\Example1_HelloWorld.png" style="margin:auto; width:45%;">
+        <p>You can quite possibly imagine the implications of such a concept. In
+            fact, Markov chains are implemented in a variety applications such as
+            sentence completion, financial modeling, and even in PageRank, Google's
+            famous algorithm that has a dark hand in the billions of search queries
+            made by Googlers every day.
+        </p>
+        <p>In the first version of my program, I make use of a discrete-time Markov
+            chain by building a two dimensional matrix; the x axis represents the
+            current state and the y axis represents the probability distribution
+            of the next state.
+        </p>
+        <p>I fill this matrix by reading pixel data from images in a dataset. When
+            finished, the distribution in the matrix presents an interesting
+            (but in hindsight, expected) result: along the y axis of the matrix
+            there are indices that display outsized probabilities of the colors
+            at that index occurring.
+        </p>
+        <p>Looking back at the "hello world" example, this makes sense. Images of
+            objects or backgrounds, like phrases, are not random. There is a sense of
+            order, whether in the word order or whether the sky is blue and white
+            (and not green), in which this memoryless process can capture.
+        </p>
+        <img src="media\Markov_Chains\landing2_v1.png" style="margin-left:auto; width:45%;">
+        <img src="media\Markov_Chains\landing2_v2.png" style="margin-right:auto; width:45%;">
+        <p>However, when outputting the initial results of the algorithm designed,
+            it became clear that while the program can adequate represent an image
+            set's outstanding colors, it wasn't quite possible to replicate the
+            basic structures that would allow the human brain to recognize as an
+            identifiable object.
+        </p>
+        <p>The solution lies back in the previously mentioned Magenta article;
+            By relying on a larger <b>order</b> (like a 2nd order differential
+            equation), low level structural randomness can be reduced as ...
+            However, this presents a spatial and temporal constraint for my
+            current implementation. Using an array, identifying the index location
+            to in
+        </p>
+        <!-- <script type="math/tex"></script> -->
+
+
+        <a href="https://github.com/dimembermatt/Markov-Chain-Generator">See the source code here!</a>
     </div>
     <script>
       function accordion(ele) {
