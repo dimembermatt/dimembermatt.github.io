@@ -1,0 +1,17 @@
+#Coursework {
+    position: relative;
+    top: 6.25%;
+    left: calc(11*6.25%);
+}
+
+#Extracurricular {
+    position: relative;
+    left: calc(6*6.25%);
+    top: calc(2*6.25%);
+}
+
+#Resume {
+    position: relative;
+    left: 6.25%;
+    top: calc(3*6.25%);
+}

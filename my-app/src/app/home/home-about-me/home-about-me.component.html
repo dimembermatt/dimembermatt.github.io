@@ -1,0 +1,14 @@
+<div>
+    <h3>
+      About Me
+    </h3>
+
+    <!-- Generate a 4x5 card for each section in About-Me. Pipe data into child components -->
+    <app-card-fourxfive
+        *ngFor="let card of aboutMeData"
+        [id]=card.title
+        [title]=card.title
+        [content]=card.content
+    >
+    </app-card-fourxfive>
+</div>

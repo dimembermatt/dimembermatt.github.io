@@ -1,0 +1,16 @@
+<!--
+@Title: home-intro.component.html
+@Author: Matthew Yu
+@Description: landing component upon accessing dimembermatt.github.io
+and dimembermatt.github.io/home. Displays the profile pic and revolving tagline.
+-->
+
+<!--profile pic-->
+<img src="../../../assets/profile_pic.jpg" id="profile_pic">
+
+<!--student description-->
+<div id="tagline_container">
+    <h3 id="tagline" *ngFor="let d of descriptions">
+        {{d}}
+    </h3>
+</div>
