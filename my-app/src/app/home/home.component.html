@@ -1,6 +1,20 @@
-<app-home-intro></app-home-intro>
-<app-home-about-me></app-home-about-me>
 <!--
-    <app-home-projects></app-home-projects>
-    <app-home-contact></app-home-contact>
+@Title: home.component.html
+@Author: Matthew Yu
+@Description: home page component for dimembermatt.github.io/
+and dimembermatt.github.io/home. Displays the various sections of the home page.
 -->
+
+<!--Scroll to top navigation button-->
+<div class="return" (click)="scrollToTop($event)" >
+    <img src="../../assets/images/up-arrow.png" alt="return" style="max-height: 100%;max-width: 100%;" (click)="scrollToTop(container)">
+</div>
+
+<app-home-intro></app-home-intro>
+<app-section *ngFor="let section of sections"
+    [title]=section.title
+    [content]=section.content
+    [image]=section.image
+    [link]=section.link
+    [linkOpt]=section.linkOpt>
+</app-section>

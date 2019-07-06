@@ -9,7 +9,7 @@ underneath the app.component. Examples of the Section component use include
 
 -->
 
-Home module (dimembermatt.github.io)
+Home section (dimembermatt.github.io)
  |-- section (Intro) {backgrounds that change based on resources}
    |-- profile pic container (4x4, circular)
    |-- tagline container (8x1)
@@ -23,7 +23,7 @@ Home module (dimembermatt.github.io)
    |-- contact hyperlink buttons (2x2) [x3] {redirects to github, linkedin, email}
  |-- icon (1x1) {floating, redirects to top of page}
 ---
-Projects module (dimembermatt.github.io/projects)
+Projects section (dimembermatt.github.io/projects)
  |-- section (TivaBoy Music Box)
    |-- slideshow (6x4)
  |-- section (Web-Audio-Visualizer) {redirects to visualizer page}
@@ -35,7 +35,7 @@ Projects module (dimembermatt.github.io/projects)
  |-- icon (1x1) {floating, redirects to top of page}
  |-- icon (1x1) {fixed, redirects to root page}
 ---
-Extracurricular module (dimembermatt.github.io/extracurricular)
+Extracurricular section (dimembermatt.github.io/extracurricular)
 |-- section (UT IEEE RAS) {redirects to RAS page}
   |-- slideshow (6x4)
 |-- section (UT SVT) {redirects to LHR page}
@@ -47,7 +47,7 @@ Extracurricular module (dimembermatt.github.io/extracurricular)
 |-- icon (1x1) {floating, redirects to top of page}
 |-- icon (1x1) {fixed, redirects to root page}
 ---
-Coursework module (dimembermatt.github.io/coursework)
+Coursework section (dimembermatt.github.io/coursework)
 |-- section (Fall 2017)
   |-- expandable container (EE302) {closes all other open expandable containers}
     |-- slideshow (6x4)

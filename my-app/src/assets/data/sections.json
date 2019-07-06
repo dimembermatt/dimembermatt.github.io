@@ -1,0 +1,37 @@
+[{
+    "title": "About Me",
+    "content":
+    "Hello, I am a junior at the University of Texas at Austin.", 
+    "image": "concorde.jpg",
+    "link": "",
+    "linkOpt": "none"
+},
+{
+    "title": "Coursework",
+    "content":
+    "Example content here",
+    "image": "lamination.jpg",
+    "link": "https://dimembermatt.github.io/coursework.html",
+    "linkOpt": "external"
+},
+{
+    "title": "Extracurricular",
+    "content": "Example content here",
+    "image": "20190520_132944.jpg",
+    "link": "https://dimembermatt.github.io/old.html#Projects%20and%20Organizations",
+    "linkOpt": "external"
+},
+{
+    "title": "Projects",
+    "content": "Example content here",
+    "image": "standardMap1_1350x881.png",
+    "link": "https://dimembermatt.github.io/projects",
+    "linkOpt": "external"
+},
+{
+    "title": "Generative Art",
+    "content": "Example content here",
+    "image": "bouquet.png",
+    "link": "https://dimembermatt.github.io/Generative_Art/",
+    "linkOpt": "external"
+}]

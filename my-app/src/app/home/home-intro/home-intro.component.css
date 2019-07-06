@@ -1,23 +1,38 @@
 #profile_pic {  /* 4x4 */
-    width: 25%;
-    height: 25%;
-    margin: 6.25% calc(6*6.25%) 0%;
+    grid-column: 7 / span 4;
+    grid-row: 2 / span 4;
     border-radius: 50%;
+    border:10px solid #021a40;
     background-size: cover;
+
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #tagline_container {   /* 8x1 */
     background-color: rgba(13, 27, 63, .8);
     color: white;
-    width: 50%;
-    height: 6.25%;
-    margin: 6.25% 25% calc(2*6.25%);
+
+    grid-column: 5 / span 8;
+    grid-row: 7 / span 1;
+
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
 
 #tagline {
-    display: inline-block;
-    vertical-align: middle;
+    height:100%;
+    /* figure out how to vertical align text in this case */
+}
+
+@media only screen and (max-width: 700px) {
+    #profile_pic {
+        grid-column: 6 / span 6;
+        grid-row: 3 / span 4;
+    }
+    #tagline_container {   /* 8x1 */
+        grid-column: 4 / span 10;
+        grid-row: 6 / span 1;
+    }
 }
