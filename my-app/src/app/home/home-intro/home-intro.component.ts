@@ -32,7 +32,7 @@ import {
 export class HomeIntroComponent implements OnInit {
     DURATION = 3600; // ms
     DELAY = 200; // ms, in order to wait for sections to load first
-    descriptions: string [];
+    descriptions: any[];
     description = "";
     idx = 0;
     currentState = 'on';
@@ -40,6 +40,10 @@ export class HomeIntroComponent implements OnInit {
     constructor(private httpService: HttpClient) { }
 
     ngOnInit() {
+    }
+
+    ngAfterViewInit() {
+        console.log("Loading tagline-descriptions array.");
         // grab data on descriptions
         this.httpService.get('../assets/data/tagline-descriptions.json').subscribe(
             data => {

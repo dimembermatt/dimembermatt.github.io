@@ -13,6 +13,10 @@ export class HomeComponent implements OnInit {
     constructor(private httpService: HttpClient) { }
 
     ngOnInit() {
+    }
+
+    ngAfterViewInit() {
+        console.log("Loading sections.json to pass to sections.");
         // grab data on each sections
         this.httpService.get('../assets/data/sections.json').subscribe(
             data => {
