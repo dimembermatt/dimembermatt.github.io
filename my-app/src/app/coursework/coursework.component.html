@@ -3,16 +3,42 @@
 @Author: Matthew Yu
 @Description: coursework page component for dimembermatt.github.io/coursework. Displays the various sections of coursework.
 -->
-<body >
+<!--Intro section for Coursework.-->
+<div class="whitebox">
     <h1>Coursework</h1>
-    <div>
+    <div style="width:50%;">
         <p>
-            Hello, this page gives a brief description of my experiences in selected classes, such as Intro to Embedded Systems or Digital Logic Design.
+            Hello, this page gives a brief description of selected classes that I've taken during my time at UT. Some examples of these classes include Intro to Embedded Systems or Development of a Solar Powered Vehicle.
         </p>
         <p>
-            A full list of classes I've taken can be found at the bottom.
+            A full list of classes I've taken can be found at the bottom. Additionally, the images displayed are selection of a larger album found <a href="https://photos.app.goo.gl/pcGoERW7bUZpGWF1A">here</a>.
         </p>
-        <!--Expandable section for each class-->
-        <!--List of other classes taken with relevant links-->
     </div>
-</body>
+    <!--Expandable section for each class-->
+    <div class="newSection">
+        <div *ngFor="let course of courses">
+            <button class="accordion" (click)="open($event)">
+                {{course.className}}
+            </button>
+            <app-section class="panel"
+                [title]=course.className
+                [contentLink]=course.contentLink
+                [image]=course.image
+                [link]=extLink
+                [linkOpt]=extLinkOpt>
+            </app-section>
+        </div>
+    </div>
+    <!--List of other classes taken with relevant links-->
+    <div style="width:50;">
+        <p>
+            The following is a list of classes that I've taken which may be of interest of you and have not yet been given a description.
+        </p>
+        <ul>
+            <li>EE316 - Digital Logic Design</li>
+            <li>EE422C - Software Design and Implementaiton II</li>
+            <li>CHE333T - Engineering Communication</li>
+
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<h3>Fall 2017</h3>
+<p>
+    Intro to Computing is a bottom-up approach of understanding the  complexity of computers, from low (low) level bitgates to the LC3-A instruction set architecture and assembly. This is the foundational class to EE319K, Intro to Embedded Systems, EE460N, Computer Architecture, and many more classes.
+</p>
+<img src="../assets/images/EE306/Connect_four.PNG" style="display:block;margin:auto; width:100%;">
+<p>
+    The final lab for this class consists of creating a fully operational game in LC3 Assembly, in this case Connect Four. Students were expected to manage I/O, create subroutines, and maintain memory of the state of the game until an end condition is reached.
+</p>
+<p>
+    A particularly interesting problem I encountered during this lab was that my program became large enough that PC-relative assembler instructions were unable to retrieve data from where they were stored. My solution for this was to create a subroutine that imported the "global variables" into local variables closer to the methods in order to provide a read-only copy. Since it was only read only, this subroutine is good only for functions such as checking for four in a row.
+</p>
+<hr>
+<p>
+    Another program that I made after the last lab ended was an LC3 program based off of the game of war. I was interested in learning about pseudorandom number generators, and wanted to create my own. I initially used a friend's prng he made for his LC3 implementation of Conway's Game of Life, and used that to make a primitive Game of War card game that unfortunately lacked a deck feature, so it only gave the player and the CPU a pseudorandom card based on an input seed.
+</p>
+<p>
+    However, I then created my own PRNG using the Linear Congruential Method referenced from Donald Knuth, the author of The Art of Computer Programming. In the future EE312 Intro to Software Design class, I and my partner will implement Go Fish in C++, that works with a pregenerated deck.
+</p>

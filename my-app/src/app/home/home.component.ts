@@ -17,19 +17,15 @@ export class HomeComponent implements OnInit {
 
     ngAfterViewInit() {
         console.log("Loading sections.json to pass to sections.");
-        // grab data on each sections
+        // grab data on each section
         this.httpService.get('../assets/data/sections.json').subscribe(
             data => {
                 this.sections = data as string [];	 // FILL THE ARRAY WITH DATA.
                 console.log(this.sections);
             },
             (err: HttpErrorResponse) => {
-                console.log (err.message);
+                console.log(err.message);
             }
         );
-    }
-
-    scrollToTop(el) {
-        window.scroll(0, 0);
     }
 }

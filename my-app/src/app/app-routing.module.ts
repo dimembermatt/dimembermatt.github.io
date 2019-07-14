@@ -4,13 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 // local imports
 import { HomeComponent } from './home/home.component';
 import { CourseworkComponent } from './coursework/coursework.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
     { path: 'home',         component: HomeComponent },
     { path: 'coursework',   component: CourseworkComponent },
     { path: '',             redirectTo: '/home',
                             pathMatch: 'full' },
-    { path: '**',           redirectTo: '/home'},
+    { path: '**',           component: NotFoundComponent},
 ];
 
 @NgModule({

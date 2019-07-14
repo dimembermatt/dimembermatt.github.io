@@ -1,0 +1,19 @@
+,
+{
+    "className": "EE316 - Digital Logic Design",
+    "semesterTaken": "Spring 2019",
+    "image": "concorde.jpg",
+    "contentLink": ""
+},
+{
+    "className": "EE422C - Software Design and Implementation II",
+    "semesterTaken": "Spring 2019",
+    "image": "concorde.jpg",
+    "contentLink": ""
+},
+{
+    "className": "CHE333T - Engineering Communication",
+    "semesterTaken": "Spring 2019",
+    "image": "concorde.jpg",
+    "contentLink": ""
+}
