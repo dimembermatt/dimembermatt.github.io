@@ -5,7 +5,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
     selector: 'app-coursework',
     templateUrl: './coursework.component.html',
-    styleUrls: ['./coursework.component.css']
+    styleUrls: ['../../assets/stylesheets/majorSections.css']
 })
 export class CourseworkComponent implements OnInit {
     courses: string [];

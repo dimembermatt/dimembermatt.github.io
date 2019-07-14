@@ -1,0 +1,47 @@
+<h3>January 2019 - Present</h3>
+<p>
+    The second half of my winter break was spent working on this project, a picture generator based on Markov Chains. My initial idea for this project came from when I was reading this <a href="https://magenta.as/using-machine-learning-to-make-art-84df7d3bb911"> cool article</a> where the author uses Markov chains to build sentences and extrapolate that process to art.
+</p>
+<p>
+    The concept behind Markov Chain data generation is pretty simple; a datapoint (in my case, a point in the color space) is associated to other datapoints based on the statistical possibility of their occurrence in sequential order.
+</p>
+<p>
+    For example, if the word "hello" is followed by the word "world" in a sentence, then when the word "hello" is typed again, there is a non-insignificant chance that "world" will be the next word. In the case that the dataset that has every "hello" instance followed by a "world" instance, that chance is 100%.
+</p>
+<img src="../assets/images/Markov_Chains/Example1_HelloWorld.png" style="display:block; margin:auto; width:90%;">
+<p>
+    You can quite possibly imagine the implications of such a concept. In fact, Markov chains are implemented in a variety applications such as sentence completion, financial modeling, and even in PageRank, Google's famous algorithm that has a dark hand in the billions of search queries made by Googlers every day.
+</p>
+<p>
+    In the first version of my program, I make use of a discrete-time Markov chain by building a two dimensional matrix; the x axis represents the current state and the y axis represents the probability distribution of the next state.
+</p>
+<p>
+    I fill this matrix by reading pixel data from images in a dataset. When finished, the distribution in the matrix presents an interesting (but in hindsight, expected) result: along the y axis of the matrix there are indices that display outsized probabilities of the colors at that index occurring.
+</p>
+<p>
+    Looking back at the "hello world" example, this makes sense. Images of objects or backgrounds, like phrases, are not random. There is a sense of order, whether in the word order or whether the sky is blue and white (and not green), in which this memoryless process can capture.
+</p>
+<img src="../assets/images/Markov_Chains/landing2_v1.png" style="width:90%;">
+<img src="../assets/images/Markov_Chains/landing2_v2.png" style="width:90%;">
+<p>
+    However, when outputting the initial results of the algorithm designed, it became clear that while the program can adequate represent an image set's outstanding colors, it wasn't quite possible to replicate the basic structures that would allow the human brain to recognize as an identifiable object.
+</p>
+<p>
+    The solution lies back in the previously mentioned Magenta article; by relying on a larger <b>order</b> (like a 2nd order differential equation), low level structural randomness can be reduced to higher level randomness: for example, the petals of a sunflower may become recognizable but are scattered across the page. If the order is large enough, the probability matrix collapses into a single image, which may be a replica of a pattern in the input data. A good blend between the two is what's needed in order to create interesting pictures.
+</p>
+<p>
+    However, larger order pictures present a spatial and temporal constraint for the current implementation. With just a 2nd order markov chain, looking at the left and above pixel, the data structure needed to look through for the index is n^3. Consider a cube. The length is the 1st index for the left pixel, the width is the 2nd index for the above pixel, and the height contains the probabilities for the possibilities of the current pixel's color at the 1st and 2nd index.
+</p>
+<p>
+    Increasing the order (adding another parameter as another index) makes the size of the data structure increase from n^3 to n^4, which is simply unsustainable at high orders.
+</p>
+<hr style="margin:0 10%;">
+<h4>Current and Future Plans</h4>
+<p>
+    As of recently, I'm still considering modularizing this program in order to create arbitrary n-order Markov Chains with images. My efforts in optimizing the program last January has resulted in very significant efficiency gains, but only work so far with quantized color buckets of x colors and with a 2nd order Markov Chain. Further progress will require a restructuring of the data structure to remove empty or near empty data points in the n-dimensional "box", meaning that each dimension doesn't have to be limited to strictly x quantized colors and can be less.
+</p>
+<p>
+    A possible idea is to use chained linked lists with some hashing function that relates the colors (in Markov::step()) to the new linked lists (previously they were associated with the index in the x color length dimension, which was very handy).
+</p>
+
+<a href="https://github.com/dimembermatt/Markov-Chain-Generator">See the source code here!</a>

@@ -1,0 +1,33 @@
+<!--
+@Title: projects.component.html
+@Author: Matthew Yu
+@Description: projects page component for dimembermatt.github.io/projects. Displays the various sections of projects.
+-->
+<!--Intro section for Projects.-->
+<div class="whitebox">
+    <h1>Projects</h1>
+    <div style="width:60%;">
+        <p>
+            Hello, this page is a small selection of projects that I've worked on over the last two years at UT. Some of them are ongoing, while others are collaborations with friends and colleagues.
+        </p>
+        <p>
+            This list certainly isn't comprehensive. Furthermore, I've only started detailed documentation of my projects starting summer 2018, as an ongoing effort to better communicate concepts to others. An album with more images of my projects will be posted in the future.
+            <!-- Additionally, the images displayed are selection of a larger album found <a href="https://photos.app.goo.gl/pcGoERW7bUZpGWF1A">here</a>. -->
+        </p>
+    </div>
+    <!--Expandable section for each project-->
+    <div class="newSection">
+        <div *ngFor="let project of projects">
+            <button class="accordion" (click)="open($event)">
+                {{project.projectName}}
+            </button>
+            <app-section class="panel"
+                [title]=project.projectName
+                [contentLink]=project.contentLink
+                [image]=project.image
+                [link]=extLink
+                [linkOpt]=extLinkOpt>
+            </app-section>
+        </div>
+    </div>
+</div>

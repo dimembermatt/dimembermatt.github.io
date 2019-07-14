@@ -17,14 +17,14 @@
     "contentLink": "home/Extracurricular.html",
     "image": "20190520_132944.jpg",
     "link": "/extracurricular",
-    "linkOpt": "none"
+    "linkOpt": "internal"
 },
 {
     "title": "Projects",
     "contentLink": "home/Projects.html",
-    "image": "standardMap1_1350x881.png",
+    "image": "projectsPic.jpg",
     "link": "/projects",
-    "linkOpt": "none"
+    "linkOpt": "internal"
 },
 {
     "title": "Generative Art",

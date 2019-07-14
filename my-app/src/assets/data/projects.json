@@ -1,4 +1,24 @@
 [{
-    "url": "Sunflower007_10bins.png",
-    "caption": "Markov Chains"
+    "projectName": "Web Audio Visualizer",
+    "periodMade": "Summer 2018",
+    "image": "AudioVisualizer/VisualizerInAction.PNG",
+    "contentLink": "projects/web-audio-visualizer.html"
+},
+{
+    "projectName": "TivaBoy Music Player",
+    "periodMade": "Summer 2018",
+    "image": "concorde.jpg",
+    "contentLink": "projects/music-player.html"
+},
+{
+    "projectName": "Generative Art",
+    "periodMade": "Summer 2018 - Present",
+    "image": "generative-art/orbitsDemo.png",
+    "contentLink": "projects/generative-art.html"
+},
+{
+    "projectName": "Markov Chain Image Generation",
+    "periodMade": "January 2019 - Present",
+    "image": "Markov_Chains/Sunflower007_10bins.png",
+    "contentLink": "projects/markov-chains.html"
 }]

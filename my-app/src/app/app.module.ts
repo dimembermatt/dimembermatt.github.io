@@ -12,6 +12,9 @@ import { SectionComponent } from './section/section.component';
 import { HomeComponent } from './home/home.component';
 import { HomeIntroComponent } from './home/home-intro/home-intro.component';
 import { CourseworkComponent } from './coursework/coursework.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ExtracurricularComponent } from './extracurricular/extracurricular.component';
+
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
@@ -25,6 +28,8 @@ import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     HomeComponent,
     HomeIntroComponent,
     CourseworkComponent,
+    ProjectsComponent,
+    ExtracurricularComponent,
     NotFoundComponent,
     sanitizeHtmlPipe,
 
