@@ -1,7 +1,7 @@
 [{
     "className": "EE302 - Intro to Electrical Engineering",
     "semesterTaken": "Fall 2017",
-    "image": "EE302/side_robot.jpg",
+    "image": "Coursework/EE302/side_robot.jpg",
     "contentLink": "coursework/EE302.html"
 },
 {
@@ -13,13 +13,13 @@
 {
     "className": "EE319K - Intro to Embedded Systems",
     "semesterTaken": "Spring 2018",
-    "image": "EE319K/wiring_and_soldering.jpg",
+    "image": "Coursework/EE319K/wiring_and_soldering.jpg",
     "contentLink": "coursework/EE319K.html"
 },
 {
     "className": "UGS303 - How Things Work",
     "semesterTaken": "Spring 2018",
-    "image": "UGS303/Control_box.jpg",
+    "image": "Coursework/UGS303/Control_box.jpg",
     "contentLink": "coursework/UGS303.html"
 },
 {
@@ -37,6 +37,18 @@
 {
     "className": "EE309S - Development of a Solar-Powered Vehicle",
     "semesterTaken": "Fall 2018",
-    "image": "EE309S/texsun.jpg",
+    "image": "Coursework/EE309S/texsun.jpg",
     "contentLink": "coursework/EE309S.html"
+},
+{
+    "className": "EE316 - Digital Logic Design",
+    "semesterTaken": "Spring 2019",
+    "image": "Coursework/EE316/lab6.png",
+    "contentLink": "coursework/EE316.html"
+},
+{
+    "className": "EE422C - Software Design and Implementation II",
+    "semesterTaken": "Spring 2019",
+    "image": "Coursework/EE422C/critters1.jpg",
+    "contentLink": "coursework/EE422C.html"
 }]

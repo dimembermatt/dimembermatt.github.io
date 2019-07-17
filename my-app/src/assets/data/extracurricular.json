@@ -1,6 +1,24 @@
 [{
     "orgName": "IEEE Robotics and Automation Society",
     "periodJoined": "Fall 2017 - Present",
-    "image": "concorde.jpg",
+    "image": "Organizations/RAS/Robotathon/Field_and_rascars.jpg",
     "contentLink": "extracurricular/IEEE_RAS.html"
+},
+{
+    "orgName": "UT Solar Vehicles Team",
+    "periodJoined": "Fall 2018 - Present",
+    "image": "Organizations/UTSVT/testing_array.jpg",
+    "contentLink": "extracurricular/UT_SVT.html"
+},
+{
+    "orgName": "ASME Design Team",
+    "periodJoined": "Fall 2017 - Present",
+    "image": "Organizations/Rube/girl_day.jpg",
+    "contentLink": "extracurricular/ASME_Design_Team.html"
+},
+{
+    "orgName": "UT Socially Intelligent Machines Lab",
+    "periodJoined": "Spring 2019",
+    "image": "concorde.jpg",
+    "contentLink": "extracurricular/SIMLab.html"
 }]
