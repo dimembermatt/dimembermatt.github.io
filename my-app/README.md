@@ -1,11 +1,23 @@
-# MyApp
+# dimembermatt.githu.io
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+
+## Development
+
+1. Create a new branch off of master using the naming convention `feature/FEATURE_NAME`
+2. Make changes and commit and push
+3. Create a pull request and merge into master when ready
+4. Checkout `master` branch, pull new changes
+5. Deploy (see Deployment)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Deployment
+Run `npm run deploy:github`, make sure assets and relevant files are reformed correctly. After a couple of minutes, if the changes pass github's testing successfully, it'll deploy at `dimembermatt.github.io/index.html`.
+
+---
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
