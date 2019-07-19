@@ -1,0 +1,13 @@
+<h3>Summer 2018</h3>
+<img src="../assets/images/Projects/AudioVisualizer/visualizerhome.png" style="margin:auto; width:100%;">
+<p>This project was built in collaboration with Ryan Menghani and Gauraang Dhamankar at UT. We decided to create a web music visualizer, using MDN's Web Audio API to grab MP3 data and the P5 API to create easy graphics.
+</p>
+<p>In particular, this version of the visualizer uses a particle system in which stationary dots are manipulated by their peers. This allowed the visualizer to simulate creative visuals like water waves or fizzy bubbles.
+</p>
+<p>One of the features in this application is the use of a rudimentary beat detection; a biquad filter was used on the frequency data analysed from the song and was averaged - when the amplitude of a low frequency was large enough, a "beat" was detected and the visualizer draws a pattern on the canvas (imagine a box cordoned into sections, drawing a pattern means pouring water into some sections and then opening the sections, releasing the water).
+</p>
+<p>Another feature is a separate mode, based off of cellular automata. It's very similar to Conway's Game of Life, in which a particle "lives" based on whether 3 or 4 neighboring cells are alive. This gives the visualization a unique shimmering effect where particles warp in and out of existence through their size.
+</p>
+<a href="https://dimembermatt.github.io/Web-Audio-Visualizer/">Checkout the visualizer here!</a>
+<p>On one of the first iterations of this project, I intended to make a pseudo-physics particle system in order to emulate waves, but that turned out south after considering the ramifications (interactions with > 2 particles, size vs field of influence, etc). But I did end up with something cool at least!
+</p>
