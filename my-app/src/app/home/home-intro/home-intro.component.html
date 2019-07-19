@@ -1,0 +1,19 @@
+<!--
+@Title: home-intro.component.html
+@Author: Matthew Yu
+@Description: first section landing component upon accessing dimembermatt.github.io
+and dimembermatt.github.io/home. Displays the profile pic and revolving tagline.
+-->
+
+<!--Container holding component with a fixed size-->
+<div class="container" [style.background]="'url(../assets/images/mirage.png)'"  [style.backgroundSize]="'cover'">
+    <!--profile pic-->
+    <img src="../../../assets/images/profile_pic.jpg" id="profile_pic" alt="Profile Picture">
+
+    <!--student description-->
+    <div id="tagline_container">
+        <h3 id="tagline" [@cycle]="currentState">
+            {{description}}
+        </h3>
+    </div>
+</div>

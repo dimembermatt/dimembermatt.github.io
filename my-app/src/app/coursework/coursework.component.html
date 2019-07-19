@@ -1,0 +1,47 @@
+<!--
+@Title: coursework.component.html
+@Author: Matthew Yu
+@Description: coursework page component for dimembermatt.github.io/coursework. Displays the various sections of coursework.
+-->
+<!--Intro section for Coursework.-->
+<div class="whitebox">
+    <h1>Coursework</h1>
+    <div style="width:60%;">
+        <p>
+            Hello, this page gives a brief description of selected classes that I've taken during my time at UT. Some examples of these classes include Intro to Embedded Systems or Development of a Solar Powered Vehicle.
+        </p>
+        <p>
+            An additional list of classes that I've taken which might be of interest to you can be found at the bottom. Additionally, the images displayed are selection of a larger album found <a href="https://photos.app.goo.gl/pcGoERW7bUZpGWF1A">here</a>.
+        </p>
+    </div>
+    <!--Expandable section for each class-->
+    <div class="newSection">
+        <div *ngFor="let course of courses">
+            <button class="accordion" (click)="open($event)">
+                {{course.className}}
+            </button>
+            <app-section class="panel"
+                [title]=course.className
+                [contentLink]=course.contentLink
+                [image]=course.image
+                [link]=extLink
+                [linkOpt]=extLinkOpt>
+            </app-section>
+        </div>
+    </div>
+    <!--List of other classes taken with relevant links-->
+    <div style="width:60;">
+        <p>
+            The following is a list of classes that I've taken which may be of interest of you and have not yet been given a description.
+        </p>
+        <ul>
+            <li>M408D - Seq, Series, and Multivar Calc</li>
+            <li>M427J - Diff Eqns with Linear Algebra</li>
+            <li>M340L - Matrices and Matrix Calculations</li>
+            <li>M325K - Discrete Mathematics</li>        
+            <li>CHE333T - Engineering Communication</li>
+            <li>ITD101 - Intro to Integrated Design</li>
+            <li>CC302 - Introduction to Ancient Rome</li>
+        </ul>
+    </div>
+</div>

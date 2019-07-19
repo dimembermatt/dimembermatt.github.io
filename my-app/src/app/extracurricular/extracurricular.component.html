@@ -1,0 +1,32 @@
+<!--
+@Title: extracurricular.component.html
+@Author: Matthew Yu
+@Description: extracurricular page component for dimembermatt.github.io/extracurricular. Displays the various sections of organizations.
+-->
+<!--Intro section for Extracurricular.-->
+<div class="whitebox">
+    <h1>Extracurricular</h1>
+    <div style="width:60%;">
+        <p>
+            Hello, this page gives a brief description of the organizations that I have and am a part of at UT, as well as my work and experiences with them.
+        </p>
+        <p>
+            Additionally, the images displayed are a selection of a larger album found <a href="https://photos.app.goo.gl/ZsARYrnmZgbUHW3T7">here</a>.
+        </p>
+    </div>
+    <!--Expandable section for each class-->
+    <div class="newSection">
+        <div *ngFor="let org of organizations">
+            <button class="accordion" (click)="open($event)">
+                {{org.orgName}}
+            </button>
+            <app-section class="panel"
+                [title]=org.orgName
+                [contentLink]=org.contentLink
+                [image]=org.image
+                [link]=extLink
+                [linkOpt]=extLinkOpt>
+            </app-section>
+        </div>
+    </div>
+</div>

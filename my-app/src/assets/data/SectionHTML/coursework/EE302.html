@@ -1,0 +1,33 @@
+<h3>Fall 2017</h3>
+<p>
+    This class constitutes the foundational circuit analysis techniques and knowledge required for future courses such as EE411, Circuit Theory and upper division courses in Electrical Engineering. Among the topics learned in this class are:
+    <ul>
+        <li>Operational Amplifiers</li>
+        <li>Mesh/Node Analysis</li>
+        <li>Thevenin and Norton Equivalents</li>
+        <li>Power Transfer</li>
+    </ul>
+</p>
+<img src="../assets/images/Coursework/EE302/back_robot.jpg" style="display:block;margin:auto; width:60%;">
+<h4>
+    Final Lab: Build an autonomous car that can navigate an obstacle course.
+</h4>
+<p>
+    While this lab was a culmination of all the technical skills we've learned in the course, such as soldering, interfacing, and building programs with Labview, ultimately it was a greater lesson in what <i>not</i> to do when designing and implementing a project such as an autonomous car.
+</p>
+<h5><center><u>Choose your hardware appropiately.</u></center></h5>
+<p>
+    As is made quite evident in the picture above, our car was a splendid mishmash of trailing wires and a semi-stable cardboard frame sagging under the weight of not one, but <i>two</i> myDAQs plus a breadboard.
+</p>
+<p>
+    This made our car unwieldy, liable to fall over backwards at a bad touch, and very hard to debug and construct. A friendly reminder that myDAQ stands for Data AcQuisition Device, not a microcontroller.
+</p>
+<p>
+    An alternative solution to the problem was to use an Arduino microcontroller, unfortunately something we were made aware of almost the night before the lab was to be checked out. That would've massively simplified the work that would have to be done programming the control loops, as well as reduce the overall size of the car.
+</p>
+<p>
+    Another issue (and arguably the one that killed the car) was the sensors we were given -a set of photoresistors for the line sensing. If held up to the black line, with and without direct illumination, the output voltage would decrease over time without fail. This means that our efforts to threshold the line through software and hardware ended up with little fruit. If I were to go back in time, I would have at the very least revised the development timeline to have first tested the sensors and changed them out before integrating them and then testing them.
+</p>
+<p>
+    This case is a pretty obvious application of the lesson; although it has popped up outside of class, particularly in my experiences with IEEE RAS Region V's 2017 robot and constructing testing setups for UTSVT's solar array. The proper research and use of equipment, even as trivial as the connectors between solar cells, play a pivotal role in the development of any project.
+</p>

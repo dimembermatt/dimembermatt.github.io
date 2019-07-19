@@ -1,0 +1,35 @@
+<!--
+@Title: section.component.html
+@Author: Matthew Yu
+@Description: generic section that spawns each section component on dimembermatt.github.io from a json file. Contains a title, text, and bg image.
+-->
+
+<!--Container holding component with a fixed size-->
+<div class="container" [style.background]="'url(../assets/images/' + this.image + ')'" [style.backgroundSize]="'cover'" [ngStyle]="{'filter': 'drop-shadow(0 0 0.75rem #4444dd)'}">
+    <div class="description">
+        <h2>
+            <!--differentiate between link and no link-->
+            <div *ngIf="linkOpt != 'none'; then someLink else noLink"></div>
+
+            <ng-template #someLink>
+                {{ '{' }}
+                <!--differentiate between internal and external link-->
+                <div *ngIf="linkOpt != 'external'; then internalLink else externalLink"></div>
+
+                <ng-template #internalLink>
+                    <a routerLink={{link}}>{{title}}</a>
+                </ng-template>
+
+                <ng-template #externalLink>
+                    <a href={{link}}>{{title}}</a>
+                </ng-template>
+                }
+            </ng-template>
+
+            <ng-template #noLink>
+                {{title}}
+            </ng-template>
+        </h2>
+        <div [innerHTML]="content"></div>
+    </div>
+</div>
