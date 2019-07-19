@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "delete-dist": "rm 3rdparty* && rm main.* && rm polyfills.* && rm runtime.* && rm styles.*",
+    "delete-dist": "rm -f 3rdparty* && rm -f main.* && rm -f polyfills.* && rm -f runtime.* && rm -f styles.*",
     "git-script": "(git add . && git commit -m 'prepare for deployment') && git push origin master",
-    "move-dist": "cd dist/[PROJECT_NAME] && mv *.* ../..",
+    "move-dist": "cd dist/my-app && mv *.* ../..",
     "deploy:github": "ng build --prod && npm run delete-dist && npm run move-dist && npm run git-script"
   },
   "private": true,
