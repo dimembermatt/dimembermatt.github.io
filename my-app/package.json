@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "delete-dist": "rm -f ../3rdparty* && rm -f ../main.* && rm -f ../polyfills.* && rm -f ../runtime.* && rm -f ../styles.* && rm ../assets/ -r",
+    "delete-dist": "rm -f ../3rdparty* && rm -f ../main* && rm -f ../polyfills* && rm -f ../runtime* && rm -f ../styles* && rm -f ../background.* && rm -f ../favicon.ico && rm -f ../index.html && rm -f ../assets/ -r",
     "git-script": "(git add . && git commit -m 'prepare for deployment') && git push origin master",
     "move-dist": "cd dist/my-app && mv ./* ../../..",
     "deploy:github": "ng build --prod && npm run delete-dist && npm run move-dist && npm run git-script"
