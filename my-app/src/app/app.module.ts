@@ -20,6 +20,7 @@ import { ExtracurricularComponent } from './extracurricular/extracurricular.comp
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -34,6 +35,7 @@ import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ExtracurricularComponent,
     NotFoundComponent,
     sanitizeHtmlPipe,
+    ContactsComponent,
 
   ],
   imports: [
