@@ -4,12 +4,15 @@
 @Description: home page component for dimembermatt.github.io/
 and dimembermatt.github.io/home. Displays the various sections of the home page.
 -->
-<app-home-intro></app-home-intro>
-<app-section *ngFor="let section of sections"
-    [title]=section.title
-    [contentLink]=section.contentLink
-    [image]=section.image
-    [link]=section.link
-    [linkOpt]=section.linkOpt>
-</app-section>
-<app-contacts></app-contacts>
+<div>
+    <app-navbar></app-navbar>
+    <app-home-intro></app-home-intro>
+    <app-section *ngFor="let section of sections"
+        [title]=section.title
+        [contentLink]=section.contentLink
+        [image]=section.image
+        [link]=section.link
+        [linkOpt]=section.linkOpt>
+    </app-section>
+    <app-contacts></app-contacts>
+</div>

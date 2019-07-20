@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    scrollToTop(el) {
-        window.scroll(0, 0);
-    }
+    // scrollToTop(el) {
+    //     window.scroll(0, 0);
+    // }
 }

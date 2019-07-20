@@ -1,0 +1,10 @@
+:host {
+    z-index: 100;
+    background-color: aquamarine;
+    position: fixed;
+    top: calc(100vh/9);
+    right: 0;
+    margin-right: 2.5vw;
+    width: calc(100vw/16*1.5);
+    height: calc(105vh/9*7);
+}

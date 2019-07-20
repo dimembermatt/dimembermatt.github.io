@@ -21,6 +21,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
 import { ContactsComponent } from './contacts/contacts.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -36,6 +37,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     NotFoundComponent,
     sanitizeHtmlPipe,
     ContactsComponent,
+    NavbarComponent,
 
   ],
   imports: [
