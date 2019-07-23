@@ -35,4 +35,7 @@
         grid-column: 4 / span 10;
         grid-row: 6 / span 1;
     }
+    #tagline, h3 {
+        font-size: .8em;
+    }
 }
