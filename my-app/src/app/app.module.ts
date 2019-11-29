@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 // local imports
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +20,7 @@ import { ExtracurricularComponent } from './extracurricular/extracurricular.comp
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -32,6 +35,7 @@ import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ExtracurricularComponent,
     NotFoundComponent,
     sanitizeHtmlPipe,
+    ContactsComponent,
 
   ],
   imports: [
@@ -40,7 +44,7 @@ import { sanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
