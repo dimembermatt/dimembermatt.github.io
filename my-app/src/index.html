@@ -2,12 +2,23 @@
 <base href="/">
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Matthew Yu</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <title>Matthew Yu Personal Site</title>
+    <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- This is for me to see if anyone actually visits my site (lol). Currently not GDPR compliant. Will add an cookie consent in a later PR...-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120550704-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120550704-1');
+    </script>
 </head>
 <body>
   <app-root></app-root>
