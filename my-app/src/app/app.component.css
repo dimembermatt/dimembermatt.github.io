@@ -23,39 +23,61 @@
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 99;
+    visibility: hidden;
 }
 
 /* The side navigation menu */
 .sidenav {
-    height: 45%; /* 100% Full-height */
+    height: 75%; /* 100% Full-height */
     width: 7.5%;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 15%; /* Stay at the top */
+    z-index: 99; /* Stay on top */
+    top: 20%; /* Stay at the top */
     left: 0;
-    background-color: rgb(255, 255, 255); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
+}
   
 /* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-  
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
+.sidenav img {
+    max-width: 100%;
+    height: auto;
+    /* display: block; */
+    margin: auto;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 99;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sidenav {
+        visibility: hidden;
+    }
+    .sidenav img {
+        visibility: hidden;
+    }
+    .return {
+        visibility: visible;
+    }
 }
