@@ -4,12 +4,15 @@
 @Description: root parent component.
 -->
 
- <!-- TODO: style a floating top nav bar -->
-<!-- <nav>
-  <a routerLink="/home">Home</a>
-  <br>
-  <a routerLink="/coursework">Coursework</a>
-</nav> -->
+<!-- Sidebar navigation -->
+<div id="mySidenav" class="sidenav">
+    <img src="../assets/images/icons/aboutMe.png" alt="About Me" (click)="scrollTo(1)">
+    <img src="../assets/images/icons/coursework.png" alt="Coursework" (click)="scrollTo(2)">
+    <img src="../assets/images/icons/extracurriculars.png" alt="Extracurricular" (click)="scrollTo(3)">
+    <img src="../assets/images/icons/projects.png" alt="Projects" (click)="scrollTo(4)">
+    <img src="../assets/images/icons/genArt.png" alt="Generative Art" (click)="scrollTo(5)">
+    <img src="../assets/images/icons/contact.png" alt="Contact" (click)="scrollTo(6)">
+</div>
 
 <!--Scroll to top navigation button-->
 <div class="return" (click)="scrollToTop($event)" >
