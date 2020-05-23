@@ -49,23 +49,28 @@ export class HomeIntroComponent implements OnInit {
             data => {
                 this.descriptions = data as string [];	 // FILL THE ARRAY WITH DATA.
                 console.log(this.descriptions);
+
+                // display static title of the first 3 lines in tagline-descriptions.json
+                for(let i = 0; i < 3; i++) {
+                    this.description += this.descriptions[i].title + "\n";
+                }
             },
             (err: HttpErrorResponse) => {
                 console.log (err.message);
             }
         );
 
-        // counter that swaps tag description
-        const switchDescription = timer(0+this.DELAY, this.DURATION);
-        switchDescription.subscribe(x => {
-            this.idx = x%this.descriptions.length;
-            this.description = this.descriptions[this.idx].title;
-            console.log(this.idx);
-        });
-        // counter that calls fade in/fade out
-        const fadeSwitch = timer(this.DURATION/2 + this.DELAY, this.DURATION/2);
-        fadeSwitch.subscribe(x => {
-            this.currentState = this.currentState === 'on' ? 'off' : 'on';
-        });
+        // // counter that swaps tag description
+        // const switchDescription = timer(0+this.DELAY, this.DURATION);
+        // switchDescription.subscribe(x => {
+        //     this.idx = x%this.descriptions.length;
+        //     this.description = this.descriptions[this.idx].title;
+        //     console.log(this.idx);
+        // });
+        // // counter that calls fade in/fade out
+        // const fadeSwitch = timer(this.DURATION/2 + this.DELAY, this.DURATION/2);
+        // fadeSwitch.subscribe(x => {
+        //     this.currentState = this.currentState === 'on' ? 'off' : 'on';
+        // });
     }
 }

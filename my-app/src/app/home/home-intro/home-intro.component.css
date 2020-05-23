@@ -1,20 +1,25 @@
 #profile_pic {  /* 4x4 */
-    grid-column: 7 / span 4;
-    grid-row: 2 / span 4;
+    grid-column: 11 / span 4;
+    grid-row: 3 / span 4;
     border-radius: 50%;
     border:10px solid #021a40;
     background-size: cover;
 
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 125%;
+    max-width: 125%;
 }
 
 #tagline_container {   /* 8x1 */
     background-color: rgba(13, 27, 63, .8);
     color: white;
 
-    grid-column: 5 / span 8;
-    grid-row: 7 / span 1;
+    /* grid-column: 2 / span 7;
+    grid-row: 3 / span 3; */
+    position: absolute;
+    top: calc(35% + .2 * 20vh);
+    left: 20%;
+    width: 40%;
+    height: 10%;
 
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -23,16 +28,24 @@
 
 #tagline {
     height:100%;
+    white-space: pre-line;
     /* figure out how to vertical align text in this case */
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     #profile_pic {
         grid-column: 6 / span 6;
         grid-row: 3 / span 4;
+        max-height: 100%;
+        max-width: 100%;
     }
     #tagline_container {   /* 8x1 */
-        grid-column: 4 / span 10;
-        grid-row: 6 / span 1;
+        /* grid-column: 4 / span 10;
+        grid-row: 6 / span 1; */
+        position: absolute;
+        top: 60%;
+        left: 26%;
+        width: 50%;
+        height: 10%;
     }
 }

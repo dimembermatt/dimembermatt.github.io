@@ -4,12 +4,34 @@
 @Description: root parent component.
 -->
 
- <!-- TODO: style a floating top nav bar -->
-<!-- <nav>
-  <a routerLink="/home">Home</a>
-  <br>
-  <a routerLink="/coursework">Coursework</a>
-</nav> -->
+<!-- Sidebar navigation: https://www.w3schools.com/howto/howto_js_sidenav.asp. Tooltip: https://www.w3schools.com/css/css_tooltip.asp -->
+<div id="mySidenav" class="sidenav">
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/aboutMe.png" alt="About Me" (click)="scrollTo(1)">
+        <span class="tooltiptext">About Me</span>        
+    </div>
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/coursework.png" alt="Coursework" (click)="scrollTo(2)">
+        <span class="tooltiptext">Coursework</span>        
+    </div>
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/extracurriculars.png" alt="Extracurricular" (click)="scrollTo(3)">
+        <span class="tooltiptext">Extracurricular</span>        
+    </div>
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/projects.png" alt="Projects" (click)="scrollTo(4)">
+        <span class="tooltiptext">Projects</span>        
+    </div>
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/genArt.png" alt="Generative Art" (click)="scrollTo(5)">
+        <span class="tooltiptext">Generative Art</span>        
+    </div>
+    <div class="tooltip" style="display:block;">
+        <img src="../assets/images/icons/contact.png" alt="Contact" (click)="scrollTo(6)">
+        <span class="tooltiptext">Contact</span>        
+    </div>
+
+</div>
 
 <!--Scroll to top navigation button-->
 <div class="return" (click)="scrollToTop($event)" >
