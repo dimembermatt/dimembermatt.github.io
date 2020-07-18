@@ -5,10 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development
 
 1. Create a new branch off of master using the naming convention `feature/FEATURE_NAME`
-2. Make changes and commit and push
-3. Create a pull request and merge into master when ready
-4. Checkout `master` branch, pull new changes
-5. Deploy (see Deployment)
+2. Make changes and test, using `npm run start`.
+   1. asset changes go into myapp/src/assets, otherwise it won't be found during development and testing.
+3. Build the project, using `npm run deploy:github`. This will prompt for credentials to push.
+4. Create a pull request and merge into master when ready
+5. Github will autodeploy changes in master!
 
 ## Development server
 
